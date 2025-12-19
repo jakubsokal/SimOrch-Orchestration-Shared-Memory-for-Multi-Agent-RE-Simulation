@@ -1,0 +1,29 @@
+scenario_name: "Meeting Room Booking Elicitation"
+description: "A dialogue between a Requirements Engineer and a User to elicit requirements for a corporate room booking system."
+seed: 42 
+max_turns: 4
+
+agents:
+  - name: "Requirements Engineer"
+    role: "RE"
+    type: "llm"
+    model: "llama2" 
+    system_prompt: "You are a helpful Requirements Engineer. Your goal is to ask clear, open-ended questions to understand the user's needs for a new meeting room booking system."
+
+  - name: "Employee"
+    role: "stakeholder"
+    type: "llm"
+    model: "llama2"
+    system_prompt: "You are an office employee. You need a system to book meeting rooms easily. You are frustrated with the current, manual email-based process."
+
+  - name: "Office Manager"
+    role: "stakeholder"
+    type: "llm"
+    model: "llama2"
+    system_prompt: "You are an office manager. You want a meeting room booking system that minimizes scheduling conflicts and maximizes room utilization."
+
+logging:
+  output_dir: "./runs/meeting_room_001"
+  save_transcript: true
+  save_requirements: true
+  generate_trace_links: true
