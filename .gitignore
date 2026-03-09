@@ -3,3 +3,5 @@ __pycache__/
 *.pyo
 *.env
 runs/
+.venv/
+ui/node_modules/

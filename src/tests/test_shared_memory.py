@@ -7,21 +7,23 @@ from memory.shared_memory import SharedMemory
 class TestMemory(unittest.TestCase):
     def test_write_and_read(self):
         memory = SharedMemory()
-        memory.write("user", "Hello, how are you?")
+        memory.write("user", "Hello, how are you?", 1, "user")
 
-        messages = memory.read()
+        messages = memory.get_all_messages()
         self.assertEqual(len(messages), 1)
         self.assertEqual(messages[0]["role"], "user")
         self.assertEqual(messages[0]["message"], "Hello, how are you?")
 
     def test_multiple_writes(self):
         memory = SharedMemory()
-        memory.write("RE", "Hello! What are your requirements?")
-        memory.write("user", "Hi there! I need my app to do XYZ.")
-        memory.write("RE", "So you want XYZ functionality?")
+        memory.write("RE", "Hello! What are your requirements?", 1, "RE")
+        memory.write("user", "Hi there! I need my app to do XYZ.",1 , "user")
+        memory.write("RE", "So you want XYZ functionality?", 2, "RE")
 
-        messages = memory.read()
+        messages = memory.get_all_messages()
         self.assertEqual(len(messages), 3)
+        self.assertEqual(messages[0]["role"], "RE")
+        self.assertEqual(messages[0]["message"], "Hello! What are your requirements?")
         self.assertEqual(messages[1]["role"], "user")
         self.assertEqual(messages[1]["message"], "Hi there! I need my app to do XYZ.")
         self.assertEqual(messages[2]["role"], "RE")
