@@ -5,8 +5,7 @@ cd src</br>
 pip install -U langchain </br>
 pip install -U langchain-openai</br>
 pip install fastapi</br>
-pip install fastapi uvicorn</br>
-pip install sqlalchemy psycopg2-binary</br>
+pip install uvicorn</br>
 pip install websockets </br>
 
 **UI**</br>
