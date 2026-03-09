@@ -1,21 +1,21 @@
 # SimOrch-Orchestration-Shared-Memory-for-Multi-Agent-RE-Simulation
 
-**py packages**
-pip install -U langchain
-pip install -U langchain-openai
-pip install fastapi
-pip install fastapi uvicorn
-pip install sqlalchemy psycopg2-binary
-pip install websockets
+**py packages**</br>
+cd src</br>
+pip install -U langchain </br>
+pip install -U langchain-openai</br>
+pip install fastapi</br>
+pip install fastapi uvicorn</br>
+pip install sqlalchemy psycopg2-binary</br>
+pip install websockets </br>
 
-**UI**
-npm create vite@latest ui -- --template react-ts
-cd ui 
-npm i
-npm i react-router-dom axios
-npm install @mui/material @emotion/react @emotion/styled
-npm install lucide-react
-npm install tailwindcss @tailwindcss/vite
+**UI**</br>
+cd ui </br>
+npm i</br>
+npm i react-router-dom axios</br>
+npm install @mui/material @emotion/react @emotion/styled</br>
+npm install lucide-react</br>
+npm install tailwindcss @tailwindcss/vite</br>
 
 # how to run 
 1. install all packages above.
@@ -23,9 +23,9 @@ npm install tailwindcss @tailwindcss/vite
 3. Open terminal and run following command 'python src/main.py --config FILE_NAME.yaml' or use this to run using predefined scenario 'python src/main.py --config scenario_001.yaml'
 4. wait for conversation to be done.
 5. next to view our results we can open the ui 
+</br>
+npm --prefix ui run dev</br>
+python -m uvicorn src.api.app:app --reload</br>
 
-npm --prefix ui run dev
-python -m uvicorn src.api.app:app --reload
-
-#Local Run
-python -m src.main --config <scenario_name>.yaml
+#Local Run</br>
+python -m src.main --config <scenario_name>.yaml</br>
