@@ -3,14 +3,14 @@ import FormInput from './FormInput';
 import SelectButton from './SelectButton';
 import FormTextarea from './FormTextarea';
 
-const PROVIDERS = ['ollama', 'openai', 'groq', 'gemini'] as const;
+const PROVIDERS = ['ollama', 'openai' /*, 'groq', 'gemini'*/] as const;
 export type Provider = typeof PROVIDERS[number];
 
 export const MODELS_BY_PROVIDER: Record<Provider, string[]> = {
     ollama: ['llama2', 'mistral', 'gemma2', 'phi3'],
-    openai: ['gpt-4o', 'gpt-4-turbo', 'gpt-3.5-turbo', 'gpt-4o-mini'],
+    openai: ['gpt-4o', 'gpt-4-turbo', 'gpt-3.5-turbo', 'gpt-4o-mini']/*,
     groq: ['llama3-70b', 'mixtral-8x7b', 'gemma-7b'],
-    gemini: ['gemini-1.5-pro', 'gemini-1.5-flash', 'gemini-pro'],
+    gemini: ['gemini-1.5-pro', 'gemini-1.5-flash', 'gemini-pro'],*/
 };
 
 export interface ModelConfig {
