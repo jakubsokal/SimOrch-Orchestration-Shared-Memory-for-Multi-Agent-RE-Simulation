@@ -42,3 +42,4 @@ In the UI you can pick a predefined scenario or create a custom one by following
 
 ## Notes
 - If using OLLAMA, install Ollama and pull a model locally before running (e.g. `ollama pull <model>`).
+- If using predefined scenarios, either change the provider to ollama and model to <model> or if you have an openai api key create a .env folder in src using the .env.example
