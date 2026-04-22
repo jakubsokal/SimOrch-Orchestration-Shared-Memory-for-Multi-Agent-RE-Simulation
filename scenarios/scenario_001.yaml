@@ -17,7 +17,7 @@ scenario:
     requirements.
   domain: Corporate
   system_type: Booking System
-  max_turns: 3
+  max_turns: 12
   conversation_type: dynamic
 
 scenarioTruths:
@@ -53,8 +53,8 @@ re_agents:
         - FR
         - NFR
         - CON
-    provider: ollama
-    model: qwen3:8b
+    provider: openai
+    model: gpt-4o-mini
     params:
       temperature: 0
       top_p: 1
@@ -83,8 +83,8 @@ user_agents:
       clarity_level: clear
       revelation_strategy: proactive
       revelation_rate: medium
-    provider: ollama
-    model: qwen3:8b
+    provider: openai
+    model: gpt-4o-mini
     params:
       temperature: 0
       top_p: 1
@@ -111,8 +111,8 @@ user_agents:
       clarity_level: clear
       revelation_strategy: proactive
       revelation_rate: slow
-    provider: ollama
-    model: qwen3:8b
+    provider: openai
+    model: gpt-4o-mini
     params:
       temperature: 0
       top_p: 1
