@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+python-dotenv
+PyYAML
+
+# LLM providers
+langchain-openai
+langchain-ollama
+
+# Evaluation
+scikit-learn
+numpy
+sentence-transformers

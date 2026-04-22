@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { Search, FileText, AlertCircle, MessageSquare, Info, AlertTriangle, XCircle } from 'lucide-react';
 import RunCard from '../components/RunCard';
 import Input from '../components/shared/Input';
@@ -16,6 +16,8 @@ interface RunSummary {
   time: string;
   timeElapsed: string;
   totalTurns: number;
+  scenarioId?: string | null;
+  runId?: string | null;
 }
 
 interface RunDetails {
@@ -37,6 +39,16 @@ export default function App() {
   const [activeTab, setActiveTab] = useState('transcript');
   const [searchQuery, setSearchQuery] = useState('');
 
+  const messageById = useMemo(() => {
+    const map: Record<string, any> = {};
+    for (const m of selectedRun?.messages ?? []) {
+      if (m?.id !== undefined && m?.id !== null) {
+        map[String(m.id)] = m;
+      }
+    }
+    return map;
+  }, [selectedRun?.messages]);
+
    useEffect(() => {
     const fetchRuns = async () => {
       try {
@@ -49,6 +61,8 @@ export default function App() {
           time: run.createdOn ? new Date(run.createdOn).toLocaleTimeString() : 'N/A',
           timeElapsed: run.timeElapsed || 'N/A',
           totalTurns: run.turnNumber || 0,
+          scenarioId: run.scenarioId ?? null,
+          runId: run.runId ?? null,
           requirements: [],
           issues: [],
           messages: [],
@@ -256,9 +270,11 @@ export default function App() {
                       {selectedRun.requirements.length > 0 ? (
                         <div className="space-y-4">
                           {selectedRun.requirements.map((req) => (
-                            <>{console.log(req)}
-                            <RequirementCard key={req.id} requirement={req} />
-                            </>
+                            <RequirementCard
+                              key={req.req_id ?? req.id}
+                              requirement={req}
+                              messageById={messageById}
+                            />
                           ))}
                         </div>
                       ) : (
@@ -325,7 +341,7 @@ export default function App() {
                       {selectedRun.issues.length > 0 ? (
                         <div className="space-y-4">
                           {selectedRun.issues.map((issue) => (
-                            <IssueCard key={issue.issue_id || issue.id} issue={issue} />
+                            <IssueCard key={issue.issue_id || issue.id} issue={issue} messageById={messageById} />
                           ))}
                         </div>
                       ) : (

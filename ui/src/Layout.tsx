@@ -1,10 +1,11 @@
 import { Outlet, useLocation, useNavigate } from 'react-router-dom';
-import { Play, List } from 'lucide-react';
+import { Play, List, BarChart3 } from 'lucide-react';
 import NavBar from './components/shared/Navbar';
 
 const navItems = [
   { key: '/', label: 'Start Simulation', icon: <Play size={16} /> },
   { key: '/runs', label: 'View Runs', icon: <List size={16} /> },
+  { key: '/evals', label: 'Eval Results', icon: <BarChart3 size={16} /> },
 ];
 
 export default function Layout() {

@@ -180,14 +180,14 @@ const UserAgentConfigCard: FC<UserAgentConfigCardProps> = ({ predefined, agents,
 
             <div className="flex justify-end pt-2 space-x-2 border-t border-gray-200">
                 <Button variant="outline" onClick={onBack}>
-                    <span className="flex items-center gap-2">
+                    <span className="flex items-center gap-2 cursor-pointer">
                         <ChevronLeft size={16} />
                         Back
                     </span>
                 </Button>
 
                 <Button onClick={onSubmit} disabled={!isValid || running}>
-                    <span className="flex items-center gap-2">
+                    <span className="flex items-center gap-2 cursor-pointer">
                         Start Simulation
                         <ChevronRight size={16} />
                     </span>

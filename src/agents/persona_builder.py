@@ -188,13 +188,11 @@ class PersonaBuilder:
     def build_user_agent_persona(persona):
         res = None
         try:
-            print(f"[PersonaBuilder] Building persona with attributes: {persona}")
-
             res =f"""
             COMMUNICATION STYLE:  {PersonaBuilder.COMMUNICATION_STYLE[persona.get('communication_style', 'cooperative')]}.
             DOMAIN KNOWLEDGE LEVEL: {PersonaBuilder.DOMAIN_KNOWLEDGE_LEVEL[persona.get('domain_knowledge_level', 'medium')]}.
-            CLARITY LEVEL: {PersonaBuilder.CLARITY_LEVEL[persona.get('clarity_level', 'medium')]}.
-            REVELATION STRATEGY: {PersonaBuilder.REVELATION_STRATEGY[persona.get('revelation_strategy', 'gradual')]}.
+            CLARITY LEVEL: {PersonaBuilder.CLARITY_LEVEL[persona.get('clarity_level', 'clear')]}.
+            REVELATION STRATEGY: {PersonaBuilder.REVELATION_STRATEGY[persona.get('revelation_strategy', 'reactive')]}.
             REVELATION RATE: {PersonaBuilder.REVELATION_RATE[persona.get('revelation_rate', 'medium')]}.
         """
         except KeyError as e:
@@ -206,7 +204,7 @@ class PersonaBuilder:
     def build_re_agent_persona(persona):
         return f"""
             EXPERIENCE LEVEL: {PersonaBuilder.EXPERIENCE_LEVEL[persona.get('experience_level', 'intermediate')]}.
-            QUESTIONING STRATEGY: {PersonaBuilder.QUESTIONING_STRATEGY[persona.get('questioning_strategy', 'exploratory')]}.
+            QUESTIONING STRATEGY: {PersonaBuilder.QUESTIONING_STRATEGY[persona.get('questioning_strategy', 'structured')]}.
             PROBING INTENSITY: {PersonaBuilder.PROBING_INTENSITY[persona.get('probing_intensity', 'medium')]}.
             REQUIREMENT FOCUS: {PersonaBuilder.REQUIREMENT_FOCUS[persona.get('requirement_focus', 'balanced')]}.
             TONE: {PersonaBuilder.TONE[persona.get('tone', 'neutral')]}.

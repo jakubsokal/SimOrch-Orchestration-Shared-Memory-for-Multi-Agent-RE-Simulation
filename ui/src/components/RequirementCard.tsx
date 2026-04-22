@@ -3,21 +3,38 @@ import { ChevronDown, FileText, User, Clock } from 'lucide-react';
 
 interface RequirementCardProps {
     requirement: any;
+    messageById?: Record<string, any>;
 }
 
-const RequirementCard: FC<RequirementCardProps> = ({ requirement }) => {
+const RequirementCard: FC<RequirementCardProps> = ({ requirement, messageById }) => {
     const [isExpanded, setIsExpanded] = useState(false);
-    { console.log("Rendering RequirementCard with requirement:", requirement) }
-    const reqId = requirement.req_id;
-    const type = requirement.requirement?.type || requirement.type || 'functional';
-    const turn = requirement?.turn_id || 0;
-    const evidence = requirement.requirement?.evidence_quote || requirement.evidence_quote || '';
-    const createdBy = requirement.requirement?.createdBy || requirement.createdBy || 'Unknown';
-    const timestamp = requirement.requirement?.timestamp || requirement.timestamp || '';
-    const originalMessage = requirement.requirement?.description || requirement.description;
-    const originalMessageId = requirement.requirement?.trace_message_id || requirement.trace_message_id || 'N/A';
 
-    console.log("Rendering RequirementCard with data:", originalMessage, originalMessageId)
+    const reqId = requirement.req_id ?? requirement.id ?? 'N/A';
+    const type = requirement.requirement?.type ?? requirement.type ?? 'functional';
+    const turn = requirement.turn_id ?? requirement.turn ?? 0;
+    const evidence =
+        requirement.requirement?.evidence_quote ??
+        requirement.requirement?.traceability?.evidence_quote ??
+        requirement.evidence_quote ??
+        requirement.traceability?.evidence_quote ??
+        '';
+    const createdBy = requirement.requirement?.createdBy ?? requirement.createdBy ?? 'Unknown';
+    const timestamp = requirement.requirement?.timestamp ?? requirement.timestamp ?? '';
+    const description = requirement.requirement?.description ?? requirement.description ?? '';
+
+    const traceMessageId = requirement.requirement?.trace_message_id ?? requirement.trace_message_id ?? null;
+    const tracedMessage = traceMessageId != null ? messageById?.[String(traceMessageId)] : undefined;
+    const originalMessageAuthor = tracedMessage?.agent ?? createdBy;
+
+    const originalMessage =
+        requirement.requirement?.original_message ??
+        requirement.original_message ??
+        requirement.requirement?.message ??
+        requirement.message ??
+        tracedMessage?.message ??
+        '';
+
+    const originalMessageId = traceMessageId ?? 'N/A';
     const formattedTimestamp = timestamp ? new Date(timestamp).toLocaleString() : 'N/A';
 
     return (
@@ -44,7 +61,7 @@ const RequirementCard: FC<RequirementCardProps> = ({ requirement }) => {
                             </span>
                         )}
                     </div>
-                    <p className="text-sm text-gray-900">{originalMessage}</p>
+                    <p className="text-sm text-gray-900">{description}</p>
                 </div>
                 <ChevronDown
                     className={`w-5 h-5 text-gray-400 transition-transform ${isExpanded ? 'rotate-180' : ''
@@ -90,8 +107,7 @@ const RequirementCard: FC<RequirementCardProps> = ({ requirement }) => {
                             <div className="border border-gray-200 rounded bg-white p-4">
                                 <div className="flex items-center gap-2 mb-2">
                                     <User className="w-4 h-4 text-gray-400" />
-                                    <span className="font-semibold text-gray-900">{createdBy}</span>
-                                    <span className="text-xs text-blue-600">Stakeholder</span>
+                                    <span className="font-semibold text-gray-900">{originalMessageAuthor}</span>
                                 </div>
                                 <p className="text-sm text-gray-900">{originalMessage}</p>
                             </div>

@@ -1,114 +1,161 @@
 scenario:
   id: scenario_002
-  seed: 42
-  scenario_name: Meeting Room Booking Elicitation
-  description: A dialogue between a Requirements Engineer and a User(employee) and
-    a User(office manager) to elicit requirements for a corporate room booking system.
-  domain: Corporate
-  system_type: Booking System
-  max_turns: 10
-  conversation_type: dynamic
+  seed: 7
+  scenario_name: IT Asset Management Elicitation
+  description: >
+    A structured requirements elicitation session for a corporate IT asset
+    management system, conducted by a senior Requirements Engineer with a
+    single stakeholder - Morgan, an IT Coordinator at a mid-sized company.
+    Morgan currently manages all asset tracking through a patchwork of
+    spreadsheets and email threads, and is acutely aware of the pain points
+    this creates. The session aims to surface both the obvious functional needs
+    (asset logging, assignment, search) and the less immediately volunteered
+    requirements around audit history, warranty alerting, and onboarding and
+    offboarding workflows. A key dynamic is that Morgan defaults to describing
+    symptoms of the current process rather than system requirements, requiring
+    the RE to probe carefully to translate frustrations into concrete needs.
+    The scenario tests whether the RE agent can systematically uncover
+    functional and non-functional requirements from a single technically
+    knowledgeable but requirements-naive stakeholder, including a latent
+    conflict between Morgan's preference for centralised IT control and
+    employees' potential need for self-service visibility of their own assets.
+
+  domain: Corporate IT
+  system_type: Asset Management System
+  max_turns: 14
+  conversation_type: one_to_one
+
 scenarioTruths:
-- id: R1
-  type: FR
-  statement: Users must be able to search for available meeting rooms by date, time,
-    and capacity.
-- id: R2
-  type: FR
-  statement: Users must be able to book, modify, and cancel room reservations.
-- id: R3
-  type: FR
-  statement: The system must send booking confirmation and reminder notifications
-    to the user.
-- id: R4
-  type: FR
-  statement: The office manager must be able to view all bookings across all rooms.
-- id: R5
-  type: FR
-  statement: The system must prevent double booking of the same room at the same time.
-- id: R6
-  type: NFR
-  statement: The system must be accessible via web and mobile.
+  - id: R1
+    type: FR
+    statement: >
+      Users must be able to log IT assets with details including asset type,
+      serial number, manufacturer, purchase date, and category.
+  - id: R2
+    type: FR
+    statement: >
+      Users must be able to assign and unassign assets to specific employees,
+      with the assignment recorded against both the asset and the employee.
+  - id: R3
+    type: FR
+    statement: >
+      The system must maintain a full audit trail of all asset changes,
+      including assignments, returns, repairs, and disposals.
+  - id: R4
+    type: FR
+    statement: >
+      The system must alert IT staff when an asset warranty or scheduled
+      maintenance date is approaching.
+  - id: R5
+    type: FR
+    statement: >
+      Users must be able to search and filter assets by category, status,
+      assigned employee, and location.
+  - id: R6
+    type: FR
+    statement: >
+      The system must generate inventory and utilisation reports summarising
+      asset counts, assignment rates, and upcoming warranty expirations.
+  - id: R7
+    type: FR
+    statement: >
+      The system must support offboarding workflows that automatically list
+      all assets assigned to a departing employee for retrieval.
+  - id: R8
+    type: NFR
+    statement: >
+      The system must be accessible via a web browser without requiring
+      a locally installed application.
+  - id: R9
+    type: NFR
+    statement: >
+      The system must enforce role-based access control, distinguishing
+      between IT admin users with full write access and read-only viewers.
+  - id: R10
+    type: NFR
+    statement: >
+      The system must allow asset data to be exported in CSV or Excel
+      format for use in external reporting.
+
 re_agents:
-- name: Requirement Engineer
-  role: 1
-  persona:
-    experience_level: senior
-    questioning_strategy: structured
-    probing_intensity: medium
-    requirement_focus: functional
-    tone: formal
+  - name: Requirement Engineer
+    role: 1
     output_prefixes:
-    - FR
-    - NFR
-    - CON
-  provider: openai
-  model: gpt-4o-mini
-  params:
-    temperature: 0
-    top_p: 1
-    max_tokens: 512
-  context_prompt: "You are an experienced Requirements Engineer conducting a structured\
-    \ elicitation \n  interview for a corporate meeting room booking system. You are\
-    \ interviewing multiple \n  stakeholders who may have different and sometimes\
-    \ conflicting needs.\n\n  Your behaviour:\n  - Ask one focused question at a time\n\
-    \  - Listen carefully and probe ambiguities before moving on\n  - Never lead the\
-    \ stakeholder toward a specific answer\n  - Prioritise unresolved requirements\
-    \ and open issues flagged by the analyst\n  - Remain neutral when stakeholders\
-    \ disagree \u2014 note the conflict, do not resolve it yourself\n  - Use plain,\
-    \ jargon-free language appropriate for non-technical stakeholders\n  - Be professional\
-    \ but conversational in tone"
+      - FR
+      - NFR
+      - CON
+    persona:
+      experience_level: senior
+      questioning_strategy: structured
+      probing_intensity: medium
+      requirement_focus: functional
+      tone: formal
+    provider: openai
+    model: gpt-4o-mini
+    params:
+      temperature: 0
+      top_p: 1
+      max_tokens: 512
+    context_prompt: >
+      You are an experienced Requirements Engineer conducting a structured
+      elicitation interview for a corporate IT asset management system.
+      You are interviewing a single stakeholder who is technically
+      knowledgeable but unfamiliar with requirements engineering practices.
+
+      Your behaviour:
+      - Ask one focused question at a time
+      - Let the stakeholder finish before probing - do not interrupt or stack questions
+      - Probe ambiguities before moving on, especially when the stakeholder
+        describes a problem rather than a system need
+      - Translate pain points into requirement candidates by asking what the
+        system should do to address them, rather than leading the stakeholder
+        to a specific answer
+      - Actively seek non-functional requirements (performance, security,
+        access control, retention) which this stakeholder is unlikely to
+        raise unprompted
+      - Remain neutral and professional throughout
+      - Use precise technical language appropriate for a technically
+        knowledgeable stakeholder
+
 user_agents:
-- name: Jamie
-  role: 2
-  persona:
-    communication_style: concise
-    domain_knowledge_level: high
-    clarity_level: clear
-    revelation_strategy: proactive
-    revelation_rate: medium
-  provider: openai
-  model: gpt-4o-mini
-  params:
-    temperature: 0
-    top_p: 1
-    max_tokens: 512
-  context_prompt: "You are Jamie, an office employee at a mid-sized company. You book\
-    \ meeting rooms \n    several times a week for team meetings and client calls.\n\
-    \n    Your frustrations:\n    - The current process is email-based and slow, often\
-    \ taking hours to get confirmation\n    - Rooms are frequently already taken when\
-    \ you arrive despite no visible booking\n    - You have no way to see room availability\
-    \ in advance\n\n    Your needs:\n    - A quick, self-service way to check availability\
-    \ and book instantly\n    - Notifications when your booking is confirmed or if\
-    \ something changes\n    - Ability to book from your phone\n\n    Your personality:\n\
-    \    - Practical and direct, you want simple solutions\n    - Not very technical,\
-    \ avoid system or developer jargon\n    - Will express frustration if asked about\
-    \ the current process"
-- name: Sarah
-  role: 2
-  persona:
-    communication_style: cooperative
-    domain_knowledge_level: high
-    clarity_level: clear
-    revelation_strategy: proactive
-    revelation_rate: slow
-  provider: openai
-  model: gpt-4o-mini
-  params:
-    temperature: 0
-    top_p: 1
-    max_tokens: 512
-  context_prompt: "You are Sarah, the office manager at a mid-sized company. You are\
-    \ responsible \n    for managing all meeting room bookings and resolving scheduling\
-    \ conflicts.\n\n    Your frustrations:\n    - Employees book large rooms for small\
-    \ meetings, wasting space\n    - No-shows are common, rooms get booked and\
-    \ never used\n    - You have no visibility into room utilisation patterns\n  \
-    \  - Last-minute cancellations leave rooms empty with no way to reassign them\n\
-    \n    Your needs:\n    - A dashboard to see all bookings across all rooms at a\
-    \ glance\n    - Ability to override or cancel any booking if there is a priority\
-    \ conflict\n    - Automatic release of rooms if a meeting hasnt started within\
-    \ 10 minutes\n    - Reports on room utilisation to justify space planning decisions\n\
-    \n    Your personality:\n    - Organised and assertive, you take room management\
-    \ seriously\n    - You are skeptical of systems that give employees too much freedom\
-    \ without oversight\n    - You will push back if you feel control is being taken\
-    \ away from you\n    - Mildly territorial about room management being your responsibility"
+  - name: Morgan
+    role: 2
+    persona:
+      communication_style: concise
+      domain_knowledge_level: high
+      clarity_level: partially_clear
+      revelation_strategy: reactive
+      revelation_rate: medium
+    provider: openai
+    model: gpt-4o-mini
+    params:
+      temperature: 0
+      top_p: 1
+      max_tokens: 512
+    context_prompt: >
+      You are Morgan, the IT Coordinator at a mid-sized company of around
+      300 employees. You are responsible for purchasing, tracking, and
+      maintaining all IT equipment including laptops, monitors, keyboards,
+      phones, and peripherals.
+
+      Your current process:
+      - You manage everything through a shared Excel spreadsheet and email
+      - The spreadsheet is frequently out of date because updates rely on
+        people remembering to tell you
+      - When someone leaves the company, you often discover unaccounted
+        assets weeks later during manual audits
+      - Warranty renewals are missed because there is no alerting system
+
+      Your frustrations:
+      - No single source of truth for what assets exist and where they are
+      - No audit trail - if an asset goes missing, you cannot prove who had it
+      - Onboarding and offboarding are chaotic with no checklist or tracking
+      - You have been caught out by expired warranties too many times
+
+      Your needs:
+      - A central system to log every asset with its full details
+      - A clear record of who has what, and a history of all assignments
+      - Automated alerts for upcoming warranty or maintenance dates
+      - A way to run quick reports without manually counting spreadsheet rows
+      - You would consider allowing employees to view their own assigned assets 
+       if they had no ability to edit anything, but you have not thought this through fully

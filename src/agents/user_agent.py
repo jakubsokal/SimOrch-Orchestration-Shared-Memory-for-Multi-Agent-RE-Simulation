@@ -4,8 +4,9 @@ from .persona_builder import PersonaBuilder
 class UserAgent(BaseAgent):
     def speak(self, message=None, role=None, conversation_history=None):
         system_context = f"{self.context_prompt}\n\nProject: {self.description}\n\n"
-        
-        print(f"[UserAgent] Persona context: {self.persona}")
+
+        scenario_truths_formatted = self.get_scenario_truths_formatted()
+        print(f"[UserAgent] Generating prompt... \n\n {conversation_history}\n\n")
 
         persona_context = PersonaBuilder.build_persona(self.persona, self.role)
         
@@ -18,7 +19,7 @@ class UserAgent(BaseAgent):
                 Stay consistent with what you have already said. Do not contradict yourself.
             """
 
-            base_rules = f"""You are {self.name}.
+        base_rules = f"""You are {self.name}.
                     Respond in first person.
                     Do not include any other speakers in your response.
                     Do NOT use emotes, actions, or asterisks (e.g. *laughs*, *sighs*).
@@ -30,7 +31,7 @@ class UserAgent(BaseAgent):
                     {persona_context}
                     
                     These are the truths about the scenario that you know and can reveal to the RE as needed:
-                    { self.scenario_truths}
+                    {scenario_truths_formatted}
                     
                     Please response in first person as if you are the stakeholder responding to the RE's questions.
                 """
@@ -40,7 +41,7 @@ class UserAgent(BaseAgent):
                 {base_rules}
 
                 Greet the Requirements Engineer and give an overview of your role and what you need from the system.
-                Be natural and conversational. Do not list everything at once — leave room for follow-up questions.
+                Be natural and conversational. Do not list everything at once - leave room for follow-up questions.
 
                 {history_context}
             """
@@ -74,13 +75,14 @@ class UserAgent(BaseAgent):
             return None
 
         final_prompt = system_context + prompt.strip()
-        print(f"[UserAgent]: Generating stakeholder response...")
+        print(f"[UserAgent]: Generating response...")
 
         response = self.agent.invoke(final_prompt)
 
-        if response and response.content:
-            response = response.content.strip()
+        response_text = self.get_response(response)
+        if response_text is not None:
+            response_text = str(response_text).strip()
 
-        print(f"[UserAgent] Response: {response}")
+        print(f"[UserAgent] Response: {response_text}")
 
-        return response
+        return response_text

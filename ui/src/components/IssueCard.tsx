@@ -3,16 +3,22 @@ import { ChevronRight, AlertCircle, AlertTriangle, Info, XCircle, User, Clock, S
 
 interface IssueCardProps {
     issue: any;
+    messageById?: Record<string, any>;
 }
 
-const IssueCard: FC<IssueCardProps> = ({ issue }) => {
+const IssueCard: FC<IssueCardProps> = ({ issue, messageById }) => {
     const [isExpanded, setIsExpanded] = useState(false);
 
-    const issueId = issue.id;
+    const issueId = issue.issue_id ?? issue.id;
     const type = issue.issue?.type || issue.type || 'unknown';
     const severity = issue.issue?.severity || issue.severity || 'low';
-    const originalMessage = issue.issue?.description || issue.description || '';
-    const originalMessageId = issue.issue?.trace_message_id || issue.trace_message_id || 'N/A';
+
+    const issueDescription = issue.issue?.description || issue.description || '';
+    const traceMessageId = issue.issue?.trace_message_id ?? issue.trace_message_id ?? null;
+    const tracedMessage = traceMessageId != null ? messageById?.[String(traceMessageId)] : undefined;
+    const originalMessage = tracedMessage?.message || '';
+    const originalMessageId = traceMessageId ?? 'N/A';
+
     const suggestedAction = issue.issue?.suggested_action || issue.suggested_action;
     const evidenceQuote = issue.issue?.evidence_quote || issue.evidence_quote || '';
     const affectsRequirements = issue.issue?.affects_requirements || issue.affects_requirements || [];
@@ -84,7 +90,7 @@ const IssueCard: FC<IssueCardProps> = ({ issue }) => {
                             </span>
                         )}
                     </div>
-                    <p className="text-sm text-gray-900 font-medium">{originalMessage}</p>
+                    <p className="text-sm text-gray-900 font-medium">{issueDescription}</p>
                 </div>
                 <ChevronRight className="w-5 h-5 text-gray-400 shrink-0" />
             </div>
@@ -138,8 +144,8 @@ const IssueCard: FC<IssueCardProps> = ({ issue }) => {
                             <div className="border border-gray-200 rounded bg-white p-4">
                                 <div className="flex items-center gap-2 mb-2">
                                     <User className="w-4 h-4 text-gray-400" />
-                                    <span className="font-semibold text-gray-900">{createdBy}</span>
-                                    <span className="text-xs text-blue-600">Stakeholder</span>
+                                    <span className="font-semibold text-gray-900">{tracedMessage?.agent ?? createdBy}</span>
+                                    <span className="text-xs text-blue-600">{tracedMessage?.role ?? 'stakeholder'}</span>
                                 </div>
                                 <p className="text-sm text-gray-900">{originalMessage}</p>
                             </div>

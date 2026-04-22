@@ -22,11 +22,28 @@ export const getAllRuns = async (): Promise<unknown> => {
 
 export const getRunById = async (runId: string | number): Promise<unknown> => {
   try {
-    const response = await api.get(`/runs/${runId}`);
+    const id = String(runId);
+    if (id.includes('/')) {
+      const [scenarioId, nestedRunId] = id.split('/', 2);
+      const response = await api.get(`/runs/${scenarioId}/${nestedRunId}`);
+      return response.data;
+    }
+
+    const response = await api.get(`/runs/${id}`);
 
     return response.data;
   } catch (error) {
     console.error(`Error fetching run ${runId}:`, error);
+    throw error;
+  }
+};
+
+export const getScenarios = async (): Promise<unknown> => {
+  try {
+    const response = await api.get('/runs/scenarios');
+    return response.data;
+  } catch (error) {
+    console.error('Error fetching scenarios:', error);
     throw error;
   }
 };

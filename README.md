@@ -1,31 +1,44 @@
 # SimOrch-Orchestration-Shared-Memory-for-Multi-Agent-RE-Simulation
 
-**py packages**
-pip install -U langchain
-pip install -U langchain-openai
-pip install fastapi
-pip install fastapi uvicorn
-pip install sqlalchemy psycopg2-binary
-pip install websockets
+## Setup
 
-**UI**
-npm create vite@latest ui -- --template react-ts
-cd ui 
-npm i
-npm i react-router-dom axios
-npm install @mui/material @emotion/react @emotion/styled
-npm install lucide-react
-npm install tailwindcss @tailwindcss/vite
+### Python
+Create/activate your virtual environment, then install dependencies open new bash terminal:
 
-# how to run 
-1. install all packages above.
-2. Add a new scenario file or use an exising one (template can be found in '/scenarios' folder)
-3. Open terminal and run following command 'python src/main.py --config FILE_NAME.yaml' or use this to run using predefined scenario 'python src/main.py --config scenario_001.yaml'
-4. wait for conversation to be done.
-5. next to view our results we can open the ui 
+```bash
+cd src
+pip install -r imports.txt
+```
 
-npm --prefix ui run dev
+### UI
+Dependencies are pinned in ui/package.json, open new bash terminal:
+
+```bash
+cd ui
+npm install
+```
+
+## How to run
+1. Add a new scenario file or use an existing one (templates in /scenarios).
+2. Run a simulation locally (writes logs under /runs):
+
+```bash
+python -m src.main --config scenario_001.yaml
+```
+
+3. Start the API:
+
+```bash
 python -m uvicorn src.api.app:app --reload
+```
 
-#Local Run
-python -m src.main --config <scenario_name>.yaml
+4. Start the UI:
+
+```bash
+npm --prefix ui run dev
+```
+
+In the UI you can pick a predefined scenario or create a custom one by following the steps.
+
+## Notes
+- If using OLLAMA, install Ollama and pull a model locally before running (e.g. `ollama pull <model>`).

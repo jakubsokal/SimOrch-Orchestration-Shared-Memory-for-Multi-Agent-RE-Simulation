@@ -1,15 +1,21 @@
+import os
+from dotenv import load_dotenv
+from dotenv import load_dotenv
 from fastapi import APIRouter, HTTPException, BackgroundTasks
 from typing import Dict, Any
 import json
 import asyncio
 
 from fastapi.responses import StreamingResponse
-from src.services.simulation_service import run_simulation
-from src.llm.requirements_enum import PROVIDER_REQUIREMENTS
+from ..services.simulation_service import run_simulation
+from ..llm.requirements_enum import PROVIDER_REQUIREMENTS
+from pathlib import Path
+
+load_dotenv(dotenv_path=Path(__file__).resolve().parent.parent / ".env")
 
 router = APIRouter(prefix="/initiate", tags=["initiate"]) 
 
-simulation_status = {"status": "idle"}  
+simulation_status = {"status": "idle"}
 
 @router.post("/")
 async def initiate_simulation(config: Dict[str, Any], background_tasks: BackgroundTasks) -> Dict[str, Any]:
@@ -18,7 +24,7 @@ async def initiate_simulation(config: Dict[str, Any], background_tasks: Backgrou
         requirements = PROVIDER_REQUIREMENTS[provider.upper()]
 
         if requirements.get('requires_api_key'):
-            api_key = agent.get('api_key')
+            api_key = agent.get('api_key') or  os.getenv('OPEN_AI_KEY')
             if not api_key or api_key.strip() == "":
                 raise HTTPException(
                     status_code=400, 
@@ -45,6 +51,7 @@ async def run_and_update(config: dict):
         simulation_status["status"] = "completed"
     except Exception as e:
         simulation_status["status"] = "failed"
+        simulation_status["error"] = str(e)
         print(f"[Simulation] Failed: {e}")
 
 

@@ -41,14 +41,12 @@ const ScenarioTruthsCard: FC<ScenarioTruthsCardProps> = ({
 
   const isValid = requirements.length > 0 && requirements.every(req => req.statement.trim() !== '');
 
-  console.log('ScenarioTruthsCard render', { requirements, isValid });
-
   return (
     <div className="p-6 max-w-3xl mx-auto space-y-6 pb-24">
       <div>
         <h4 className="text-sm font-semibold text-gray-900 mb-1">Ground Truth Requirements</h4>
         <p className="text-sm text-gray-500">
-          Define the full set of requirements. Visible to user agents and the evaluator — not the RE agent.
+          Define the full set of requirements. Visible to user agents and the evaluator - not the RE agent.
         </p>
       </div>
 
@@ -125,14 +123,14 @@ const ScenarioTruthsCard: FC<ScenarioTruthsCardProps> = ({
       </div>
       <div className="flex justify-end pt-2 space-x-2 border-t border-gray-200">
         <Button variant="outline" onClick={onBack}>
-          <span className="flex items-center gap-2">
+          <span className="flex items-center gap-2 cursor-pointer">
             <ChevronLeft size={16} />
             Back
           </span>
         </Button>
 
         <Button onClick={onNext} disabled={!isValid && !predefined}>
-          <span className="flex items-center gap-2">
+          <span className="flex items-center gap-2 cursor-pointer">
             Continue
             <ChevronRight size={16} />
           </span>

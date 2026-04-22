@@ -87,6 +87,8 @@ const REAgentConfigCard: FC<REAgentConfigCardProps> = ({ predefined, agents, onC
     onChange(agents.map((a, i) => i === index ? updated : a));
   };
 
+  type PersonaKey = Exclude<keyof REAgentConfig['persona'], 'output_prefixes'>;
+
   const togglePrefix = (index: number, prefix: string) => {
     const agent = agents[index];
     const prefixes = agent.persona.output_prefixes.includes(prefix)
@@ -106,8 +108,7 @@ const REAgentConfigCard: FC<REAgentConfigCardProps> = ({ predefined, agents, onC
       agent.persona.questioning_strategy !== '' &&
       agent.persona.probing_intensity !== '' &&
       agent.persona.requirement_focus !== '' &&
-      agent.persona.tone !== '' &&
-      agent.persona.output_prefixes.length > 0
+      agent.persona.tone !== '' 
     );
 
   return (
@@ -177,8 +178,11 @@ const REAgentConfigCard: FC<REAgentConfigCardProps> = ({ predefined, agents, onC
                           <SelectButton
                             key={opt}
                             label={opt}
-                            active={(agent[key as keyof REAgentConfig] as string) === opt}
-                            onClick={() => updateAgent(i, { ...agent, [key]: opt })}
+                            active={agent.persona[key as PersonaKey] === opt}
+                            onClick={() => updateAgent(i, {
+                              ...agent,
+                              persona: { ...agent.persona, [key as PersonaKey]: opt },
+                            })}
                           />
                         ))}
                       </div>
@@ -210,14 +214,14 @@ const REAgentConfigCard: FC<REAgentConfigCardProps> = ({ predefined, agents, onC
 
       <div className="flex justify-end pt-2 space-x-2 border-t border-gray-200">
         <Button variant="outline" onClick={onBack}>
-          <span className="flex items-center gap-2">
+          <span className="flex items-center gap-2 cursor-pointer">
             <ChevronLeft size={16} />
             Back
           </span>
         </Button>
 
         <Button onClick={onNext} disabled={!predefined && !isValid}>
-          <span className="flex items-center gap-2">
+          <span className="flex items-center gap-2 cursor-pointer">
             Continue
             <ChevronRight size={16} />
           </span>

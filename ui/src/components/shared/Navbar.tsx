@@ -21,7 +21,7 @@ const NavBar: FC<NavBarProps> = ({ items, activePage, onNavigate }) => {
             key={item.key}
             onClick={() => onNavigate(item.key)}
             className={`
-              flex items-center gap-2 px-4 py-2 rounded-lg font-medium text-sm transition-colors
+              flex items-center gap-2 px-4 py-2 rounded-lg font-medium text-sm transition-colors cursor-pointer
               ${activePage === item.key
                 ? 'bg-white text-gray-900 shadow-sm'
                 : 'text-gray-600 hover:text-gray-900'

@@ -23,8 +23,7 @@ def get_model_params(provider, params):
 
 class LLMFactory:
     def create_llm(llm_cfg, seed):
-        api_key = os.getenv('OPEN_AI_KEY')
-        print(f"[LLMFactory] Creating LLM with config: {llm_cfg['provider']}, {llm_cfg['model']}")
+        api_key =llm_cfg.get('api_key')
         
         provider = llm_cfg['provider'].upper()
         model = llm_cfg['model']
@@ -38,4 +37,4 @@ class LLMFactory:
         if not llm_class:
             raise ValueError(f"LLM '{provider}' is not supported.")
         
-        return llm_class(model=model, seed=seed, **params, api_key=llm_cfg.get('api_key', api_key))
+        return llm_class(model=model, seed=seed, **params, api_key=api_key)

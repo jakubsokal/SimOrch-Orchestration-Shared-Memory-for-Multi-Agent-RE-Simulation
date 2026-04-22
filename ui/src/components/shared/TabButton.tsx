@@ -13,7 +13,7 @@ const TabButton: FC<TabButtonProps> = ({ icon, label, count, isSelected, onClick
         <button
             onClick={onClick}
             className={`
-                flex items-center gap-2 px-4 py-2 rounded-lg font-medium text-sm transition-colors
+                flex items-center gap-2 px-4 py-2 rounded-lg font-medium text-sm transition-colors cursor-pointer
                 ${isSelected
                     ? 'bg-white text-gray-900 shadow-sm'
                     : 'text-gray-600 hover:text-gray-900'

@@ -13,7 +13,6 @@ class AgentFactory:
     
     def create_agent(agent_cfg, description, seed, scenarioTruths=None):
         llm = LLMFactory.create_llm(agent_cfg, seed=seed)
-        print(f"[AgentFactory] Creating agent with config: {agent_cfg}")
 
         agent_class = AgentFactory.AGENT_TYPE_MAP.get(AgentRole(agent_cfg['role']))
         if not agent_class:

@@ -10,13 +10,13 @@ class LoadScenario:
 
         print(f"[Context] Attempting to load scenario from {Path(__file__).resolve().parents[2]}")
         
-        print(f"[Context] Loaded scenario from {path}")
         try:
             with open(path, 'r', encoding='utf-8') as f:
                 return yaml.safe_load(f)
         except (OSError, yaml.YAMLError) as e:
             print(f"[Context] Failed to load scenario from {path}: {e}")
             return e
+        print(f"[Context] Loaded scenario from {path}")
         
     def args_load():
         parser = argparse.ArgumentParser(description='Load scenario configuration')

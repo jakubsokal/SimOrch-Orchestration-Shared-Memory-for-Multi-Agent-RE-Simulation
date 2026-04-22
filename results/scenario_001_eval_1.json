@@ -1,0 +1,1921 @@
+{
+  "generated_at": "2026-04-13T21:14:36.277062",
+  "runs_dir": "scenario_001",
+  "scenario_yaml": "scenario_001.yaml",
+  "feasibility": {
+    "total_runs": 5,
+    "successful_runs": 5,
+    "failed_runs": 0,
+    "completion_rate_percent": 100.0,
+    "behavioural_validity_avg_percent": 100.0,
+    "behavioural_validity_sd": 0.0,
+    "score_percent": 100.0,
+    "grade": "Excellent",
+    "details": [
+      {
+        "run": "run_001",
+        "status": "completed",
+        "status_source": "run_details.json",
+        "completed": true,
+        "messages": 12,
+        "turns": 12,
+        "seed": 42,
+        "reproducible_flag": true,
+        "behavioural_validity": {
+          "checks": {
+            "B1_all_agents_contributed": true,
+            "B2_turn_alternation": true,
+            "B3_no_consecutive_duplicates": true,
+            "B4_re_question_rate": true,
+            "B5_extraction_coverage": true
+          },
+          "passed": 5,
+          "total": 5,
+          "score_percent": 100.0,
+          "re_question_rate": 1.0,
+          "extraction_coverage": 1.0,
+          "notes": []
+        },
+        "warnings": [],
+        "errors": []
+      },
+      {
+        "run": "run_002",
+        "status": "completed",
+        "status_source": "run_details.json",
+        "completed": true,
+        "messages": 12,
+        "turns": 12,
+        "seed": 42,
+        "reproducible_flag": true,
+        "behavioural_validity": {
+          "checks": {
+            "B1_all_agents_contributed": true,
+            "B2_turn_alternation": true,
+            "B3_no_consecutive_duplicates": true,
+            "B4_re_question_rate": true,
+            "B5_extraction_coverage": true
+          },
+          "passed": 5,
+          "total": 5,
+          "score_percent": 100.0,
+          "re_question_rate": 1.0,
+          "extraction_coverage": 1.0,
+          "notes": []
+        },
+        "warnings": [],
+        "errors": []
+      },
+      {
+        "run": "run_003",
+        "status": "completed",
+        "status_source": "run_details.json",
+        "completed": true,
+        "messages": 12,
+        "turns": 12,
+        "seed": 42,
+        "reproducible_flag": true,
+        "behavioural_validity": {
+          "checks": {
+            "B1_all_agents_contributed": true,
+            "B2_turn_alternation": true,
+            "B3_no_consecutive_duplicates": true,
+            "B4_re_question_rate": true,
+            "B5_extraction_coverage": true
+          },
+          "passed": 5,
+          "total": 5,
+          "score_percent": 100.0,
+          "re_question_rate": 1.0,
+          "extraction_coverage": 1.0,
+          "notes": []
+        },
+        "warnings": [],
+        "errors": []
+      },
+      {
+        "run": "run_004",
+        "status": "completed",
+        "status_source": "run_details.json",
+        "completed": true,
+        "messages": 12,
+        "turns": 12,
+        "seed": 42,
+        "reproducible_flag": true,
+        "behavioural_validity": {
+          "checks": {
+            "B1_all_agents_contributed": true,
+            "B2_turn_alternation": true,
+            "B3_no_consecutive_duplicates": true,
+            "B4_re_question_rate": true,
+            "B5_extraction_coverage": true
+          },
+          "passed": 5,
+          "total": 5,
+          "score_percent": 100.0,
+          "re_question_rate": 1.0,
+          "extraction_coverage": 1.0,
+          "notes": []
+        },
+        "warnings": [],
+        "errors": []
+      },
+      {
+        "run": "run_005",
+        "status": "completed",
+        "status_source": "run_details.json",
+        "completed": true,
+        "messages": 12,
+        "turns": 12,
+        "seed": 42,
+        "reproducible_flag": true,
+        "behavioural_validity": {
+          "checks": {
+            "B1_all_agents_contributed": true,
+            "B2_turn_alternation": true,
+            "B3_no_consecutive_duplicates": true,
+            "B4_re_question_rate": true,
+            "B5_extraction_coverage": true
+          },
+          "passed": 5,
+          "total": 5,
+          "score_percent": 100.0,
+          "re_question_rate": 1.0,
+          "extraction_coverage": 1.0,
+          "notes": []
+        },
+        "warnings": [],
+        "errors": []
+      }
+    ]
+  },
+  "reproducibility": {
+    "runs_compared": 5,
+    "pairs_evaluated": 10,
+    "structural": {
+      "average_percent": 100.0,
+      "sd": 0.0,
+      "grade": "Excellent",
+      "note": "Orchestrator determinism turn count and agent order."
+    },
+    "semantic": {
+      "method": "SBERT (all-MiniLM-L6-v2)",
+      "average_percent": 65.84,
+      "sd": 8.4294,
+      "grade": "Satisfactory",
+      "note": "Primary metric meaning equivalence across runs."
+    },
+    "lexical_reference": {
+      "method": "difflib",
+      "average_percent": 27.27,
+      "note": "Reference baseline only therefore not graded."
+    },
+    "pair_details": [
+      {
+        "pair": "run_001 vs run_002",
+        "structural_similarity_percent": 100.0,
+        "lexical_percent": 33.8,
+        "messages_run_a": 12,
+        "messages_run_b": 12,
+        "turns_compared": 12,
+        "sbert_percent": 71.8
+      },
+      {
+        "pair": "run_001 vs run_003",
+        "structural_similarity_percent": 100.0,
+        "lexical_percent": 39.49,
+        "messages_run_a": 12,
+        "messages_run_b": 12,
+        "turns_compared": 12,
+        "sbert_percent": 83.05
+      },
+      {
+        "pair": "run_001 vs run_004",
+        "structural_similarity_percent": 100.0,
+        "lexical_percent": 25.6,
+        "messages_run_a": 12,
+        "messages_run_b": 12,
+        "turns_compared": 12,
+        "sbert_percent": 55.43
+      },
+      {
+        "pair": "run_001 vs run_005",
+        "structural_similarity_percent": 100.0,
+        "lexical_percent": 24.16,
+        "messages_run_a": 12,
+        "messages_run_b": 12,
+        "turns_compared": 12,
+        "sbert_percent": 63.16
+      },
+      {
+        "pair": "run_002 vs run_003",
+        "structural_similarity_percent": 100.0,
+        "lexical_percent": 32.75,
+        "messages_run_a": 12,
+        "messages_run_b": 12,
+        "turns_compared": 12,
+        "sbert_percent": 71.32
+      },
+      {
+        "pair": "run_002 vs run_004",
+        "structural_similarity_percent": 100.0,
+        "lexical_percent": 23.8,
+        "messages_run_a": 12,
+        "messages_run_b": 12,
+        "turns_compared": 12,
+        "sbert_percent": 66.42
+      },
+      {
+        "pair": "run_002 vs run_005",
+        "structural_similarity_percent": 100.0,
+        "lexical_percent": 25.73,
+        "messages_run_a": 12,
+        "messages_run_b": 12,
+        "turns_compared": 12,
+        "sbert_percent": 71.02
+      },
+      {
+        "pair": "run_003 vs run_004",
+        "structural_similarity_percent": 100.0,
+        "lexical_percent": 24.53,
+        "messages_run_a": 12,
+        "messages_run_b": 12,
+        "turns_compared": 12,
+        "sbert_percent": 54.74
+      },
+      {
+        "pair": "run_003 vs run_005",
+        "structural_similarity_percent": 100.0,
+        "lexical_percent": 23.01,
+        "messages_run_a": 12,
+        "messages_run_b": 12,
+        "turns_compared": 12,
+        "sbert_percent": 64.68
+      },
+      {
+        "pair": "run_004 vs run_005",
+        "structural_similarity_percent": 100.0,
+        "lexical_percent": 19.79,
+        "messages_run_a": 12,
+        "messages_run_b": 12,
+        "turns_compared": 12,
+        "sbert_percent": 56.8
+      }
+    ]
+  },
+  "traceability": {
+    "runs_evaluated": 5,
+    "score_percent": 100.0,
+    "sd": 0.0,
+    "grade": "Excellent",
+    "run_details": [
+      {
+        "run": "run_001",
+        "total_requirements": 16,
+        "struct_traced": 16,
+        "structural_traceability_percent": 100.0,
+        "sem_traced": 16,
+        "semantic_similarity_percent": 100.0,
+        "avg_sbert": 0.6827,
+        "avg_tfidf": 0.5065,
+        "score_percent": 100.0,
+        "requirements": [
+          {
+            "id": 1,
+            "text": "The system should allow users to quickly check the availability of meeting rooms and book them instantly without waiting for email confirmations.",
+            "source_turn": 2,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.9486,
+            "tfidf": 0.6103
+          },
+          {
+            "id": 2,
+            "text": "The system should send notifications to users when their booking is confirmed or if there are any changes.",
+            "source_turn": 2,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.4786,
+            "tfidf": 0.5438
+          },
+          {
+            "id": 3,
+            "text": "The system should allow users to search for rooms based on date, time, and capacity.",
+            "source_turn": 2,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.5615,
+            "tfidf": 0.6143
+          },
+          {
+            "id": 4,
+            "text": "The system should provide a fast, self-service experience for booking meeting rooms.",
+            "source_turn": 4,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.6419,
+            "tfidf": 0.3539
+          },
+          {
+            "id": 5,
+            "text": "The system should allow users to find and reserve rooms that meet their needs quickly.",
+            "source_turn": 4,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.7099,
+            "tfidf": 0.4575
+          },
+          {
+            "id": 6,
+            "text": "The system should include oversight features to prevent misuse of room bookings.",
+            "source_turn": 4,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.6446,
+            "tfidf": 0.4048
+          },
+          {
+            "id": 7,
+            "text": "The system should allow users to book rooms based on predefined criteria, such as room capacity relative to the number of attendees.",
+            "source_turn": 6,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.8426,
+            "tfidf": 0.5468
+          },
+          {
+            "id": 8,
+            "text": "The system should provide the office manager with the ability to set limits on room bookings, such as restricting large rooms for small meetings.",
+            "source_turn": 6,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.796,
+            "tfidf": 0.5307
+          },
+          {
+            "id": 9,
+            "text": "The system must prevent double bookings of the same room at the same time to avoid conflicts.",
+            "source_turn": 6,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.7687,
+            "tfidf": 0.5296
+          },
+          {
+            "id": 10,
+            "text": "The system should filter rooms based on capacity, equipment, and location to match meeting requirements.",
+            "source_turn": 8,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.8499,
+            "tfidf": 0.5485
+          },
+          {
+            "id": 11,
+            "text": "The system should allow users to filter rooms based on required technology or amenities to meet specific needs.",
+            "source_turn": 8,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.5057,
+            "tfidf": 0.3883
+          },
+          {
+            "id": 12,
+            "text": "The system should send booking confirmation and reminder notifications to users to ensure awareness of meeting details and reduce no-shows.",
+            "source_turn": 8,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.3688,
+            "tfidf": 0.3369
+          },
+          {
+            "id": 13,
+            "text": "The system should provide filtering options for meeting rooms that include essential technology and amenities.",
+            "source_turn": 10,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.9522,
+            "tfidf": 0.7897
+          },
+          {
+            "id": 14,
+            "text": "The system must allow users to modify or cancel their bookings easily to accommodate last-minute changes.",
+            "source_turn": 10,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.4817,
+            "tfidf": 0.5616
+          },
+          {
+            "id": 15,
+            "text": "The system must allow users to cancel their bookings with a simple click, ideally with a confirmation prompt to prevent accidental cancellations.",
+            "source_turn": 12,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.7729,
+            "tfidf": 0.4722
+          },
+          {
+            "id": 16,
+            "text": "The system must automatically release rooms if a meeting has not started within 10 minutes of the scheduled time to improve room utilization.",
+            "source_turn": 12,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.6002,
+            "tfidf": 0.4146
+          }
+        ]
+      },
+      {
+        "run": "run_002",
+        "total_requirements": 15,
+        "struct_traced": 15,
+        "structural_traceability_percent": 100.0,
+        "sem_traced": 15,
+        "semantic_similarity_percent": 100.0,
+        "avg_sbert": 0.7018,
+        "avg_tfidf": 0.5104,
+        "score_percent": 100.0,
+        "requirements": [
+          {
+            "id": 1,
+            "text": "The system should allow users to quickly check the availability of meeting rooms and book them instantly without waiting for email confirmations.",
+            "source_turn": 2,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.9486,
+            "tfidf": 0.6102
+          },
+          {
+            "id": 2,
+            "text": "The system should send notifications to users when their booking is confirmed or if there are any changes.",
+            "source_turn": 2,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.4786,
+            "tfidf": 0.5343
+          },
+          {
+            "id": 3,
+            "text": "The system should allow users to search for rooms based on date, time, and capacity.",
+            "source_turn": 2,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.5615,
+            "tfidf": 0.6307
+          },
+          {
+            "id": 4,
+            "text": "The system should help users secure meeting rooms immediately when needed, especially during tight schedules.",
+            "source_turn": 4,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.9095,
+            "tfidf": 0.4822
+          },
+          {
+            "id": 5,
+            "text": "The system must prevent double booking of the same room at the same time to avoid conflicts.",
+            "source_turn": 4,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.6841,
+            "tfidf": 0.4428
+          },
+          {
+            "id": 6,
+            "text": "The system must implement real-time availability checks to ensure accurate booking status and prevent double bookings.",
+            "source_turn": 6,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.9176,
+            "tfidf": 0.6203
+          },
+          {
+            "id": 7,
+            "text": "The system should lock the room for a brief period during the booking process to avoid conflicts.",
+            "source_turn": 6,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.8165,
+            "tfidf": 0.6124
+          },
+          {
+            "id": 8,
+            "text": "The system must allow users to modify or cancel their bookings easily to accommodate changing plans.",
+            "source_turn": 6,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.6726,
+            "tfidf": 0.544
+          },
+          {
+            "id": 9,
+            "text": "The system must update the reservation in real-time when a booking is modified.",
+            "source_turn": 8,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.522,
+            "tfidf": 0.3317
+          },
+          {
+            "id": 10,
+            "text": "The system must immediately free up the room when a booking is canceled.",
+            "source_turn": 8,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.5664,
+            "tfidf": 0.3764
+          },
+          {
+            "id": 11,
+            "text": "The system must automatically release a room if a meeting has not started within 10 minutes of the scheduled time.",
+            "source_turn": 8,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.6355,
+            "tfidf": 0.426
+          },
+          {
+            "id": 12,
+            "text": "The system should provide a user-friendly interface for modifying or canceling bookings, including clear buttons, a simple calendar view, and a list of current bookings.",
+            "source_turn": 10,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.9184,
+            "tfidf": 0.6751
+          },
+          {
+            "id": 13,
+            "text": "The system should allow users to filter available rooms based on specific amenities to better meet their needs.",
+            "source_turn": 10,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.5613,
+            "tfidf": 0.5625
+          },
+          {
+            "id": 14,
+            "text": "The system should allow users to filter available rooms based on essential amenities such as video conferencing capabilities, whiteboards, and projectors to streamline the booking process.",
+            "source_turn": 12,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.8491,
+            "tfidf": 0.4424
+          },
+          {
+            "id": 15,
+            "text": "The system must send booking confirmation and reminder notifications to users to keep them informed about their reservations and any changes.",
+            "source_turn": 12,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.4849,
+            "tfidf": 0.3647
+          }
+        ]
+      },
+      {
+        "run": "run_003",
+        "total_requirements": 15,
+        "struct_traced": 15,
+        "structural_traceability_percent": 100.0,
+        "sem_traced": 15,
+        "semantic_similarity_percent": 100.0,
+        "avg_sbert": 0.6918,
+        "avg_tfidf": 0.4549,
+        "score_percent": 100.0,
+        "requirements": [
+          {
+            "id": 1,
+            "text": "The system should allow users to quickly check the availability of meeting rooms and book them instantly without waiting for email confirmations.",
+            "source_turn": 2,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.9486,
+            "tfidf": 0.6001
+          },
+          {
+            "id": 2,
+            "text": "The system should send notifications to users when their booking is confirmed or if there are any changes.",
+            "source_turn": 2,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.4786,
+            "tfidf": 0.5475
+          },
+          {
+            "id": 3,
+            "text": "The system should allow users to search for rooms based on date, time, and capacity.",
+            "source_turn": 2,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.5615,
+            "tfidf": 0.6169
+          },
+          {
+            "id": 4,
+            "text": "The system should prevent double booking of the same room at the same time to avoid conflicts and ensure reliability of reservations.",
+            "source_turn": 4,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.6103,
+            "tfidf": 0.3183
+          },
+          {
+            "id": 5,
+            "text": "The system should provide a fast, self-service experience to enhance productivity and minimize administrative tasks.",
+            "source_turn": 4,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.4762,
+            "tfidf": 0.3384
+          },
+          {
+            "id": 6,
+            "text": "The system should allow users to select rooms based on their capacity and provide warnings or restrictions for bookings that exceed the required capacity.",
+            "source_turn": 6,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.8451,
+            "tfidf": 0.5095
+          },
+          {
+            "id": 7,
+            "text": "The system should allow the office manager to set rules for room bookings, including limiting the maximum capacity for certain rooms based on their intended use.",
+            "source_turn": 6,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.7877,
+            "tfidf": 0.386
+          },
+          {
+            "id": 8,
+            "text": "The system should allow the office manager to set maximum capacity limits for each room based on its intended use to ensure appropriate bookings.",
+            "source_turn": 8,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.754,
+            "tfidf": 0.3976
+          },
+          {
+            "id": 9,
+            "text": "The system should enable the office manager to restrict bookings for certain rooms during peak hours or for specific types of meetings to manage resource availability effectively.",
+            "source_turn": 8,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.7591,
+            "tfidf": 0.3926
+          },
+          {
+            "id": 10,
+            "text": "The system should provide analytics on room usage patterns to help the office manager adjust booking rules based on actual utilization data.",
+            "source_turn": 8,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.6073,
+            "tfidf": 0.2504
+          },
+          {
+            "id": 11,
+            "text": "The system should provide insights on room usage patterns, including frequency of bookings, peak usage times, and average number of attendees, to assist the office manager in decision-making.",
+            "source_turn": 10,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.8515,
+            "tfidf": 0.643
+          },
+          {
+            "id": 12,
+            "text": "The system should track cancellations and no-shows to provide data for understanding room utilization and adjusting booking rules.",
+            "source_turn": 10,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.8213,
+            "tfidf": 0.5947
+          },
+          {
+            "id": 13,
+            "text": "The system must capture specific data points related to bookings, including date, time, duration, and meeting occurrence.",
+            "source_turn": 12,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.6213,
+            "tfidf": 0.4641
+          },
+          {
+            "id": 14,
+            "text": "The system must track the frequency of no-shows for each room to inform booking rule adjustments.",
+            "source_turn": 12,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.6376,
+            "tfidf": 0.3951
+          },
+          {
+            "id": 15,
+            "text": "The system should automatically release rooms if a meeting has not started within 10 minutes of the scheduled time.",
+            "source_turn": 12,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.6169,
+            "tfidf": 0.3696
+          }
+        ]
+      },
+      {
+        "run": "run_004",
+        "total_requirements": 16,
+        "struct_traced": 16,
+        "structural_traceability_percent": 100.0,
+        "sem_traced": 16,
+        "semantic_similarity_percent": 100.0,
+        "avg_sbert": 0.6829,
+        "avg_tfidf": 0.4816,
+        "score_percent": 100.0,
+        "requirements": [
+          {
+            "id": 1,
+            "text": "The system must provide a quick and self-service way to check room availability and book instantly without waiting for email confirmations.",
+            "source_turn": 2,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.8809,
+            "tfidf": 0.56
+          },
+          {
+            "id": 2,
+            "text": "The system must allow users to modify or cancel reservations easily.",
+            "source_turn": 2,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.4638,
+            "tfidf": 0.3997
+          },
+          {
+            "id": 3,
+            "text": "The system must send notifications when a booking is confirmed or if there are any changes.",
+            "source_turn": 2,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.674,
+            "tfidf": 0.4892
+          },
+          {
+            "id": 4,
+            "text": "The system must prevent double bookings to avoid conflicts when users arrive at the room.",
+            "source_turn": 2,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.5114,
+            "tfidf": 0.531
+          },
+          {
+            "id": 5,
+            "text": "The system must allow users to easily change the date, time, or capacity of their bookings.",
+            "source_turn": 4,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.7065,
+            "tfidf": 0.4702
+          },
+          {
+            "id": 6,
+            "text": "The system must provide visibility of upcoming bookings for a room to help users make informed decisions.",
+            "source_turn": 4,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.8162,
+            "tfidf": 0.4616
+          },
+          {
+            "id": 7,
+            "text": "The system must provide a streamlined process for canceling a booking without multiple steps or waiting for email confirmations.",
+            "source_turn": 6,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.7078,
+            "tfidf": 0.5158
+          },
+          {
+            "id": 8,
+            "text": "The system must provide immediate feedback on the cancellation status to inform users if it was successful.",
+            "source_turn": 6,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.7319,
+            "tfidf": 0.4167
+          },
+          {
+            "id": 9,
+            "text": "The system must provide booking details, such as the date, time, and room that was canceled, in the cancellation feedback.",
+            "source_turn": 8,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.7911,
+            "tfidf": 0.4311
+          },
+          {
+            "id": 10,
+            "text": "The system must provide a confirmation message indicating that the room is now available for others to book after a cancellation.",
+            "source_turn": 8,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.5269,
+            "tfidf": 0.3966
+          },
+          {
+            "id": 11,
+            "text": "The system must provide a clear error message if the cancellation fails for any reason.",
+            "source_turn": 8,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.4939,
+            "tfidf": 0.3878
+          },
+          {
+            "id": 12,
+            "text": "The system must provide a separate view for upcoming bookings to allow users to assess room availability without interrupting other processes.",
+            "source_turn": 10,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.882,
+            "tfidf": 0.5243
+          },
+          {
+            "id": 13,
+            "text": "The system must allow users to filter upcoming bookings by date and time to quickly find relevant information.",
+            "source_turn": 10,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.6749,
+            "tfidf": 0.5519
+          },
+          {
+            "id": 14,
+            "text": "The system must allow users to set reminders for their own bookings to ensure they do not forget them.",
+            "source_turn": 10,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.5647,
+            "tfidf": 0.5086
+          },
+          {
+            "id": 15,
+            "text": "The system must allow users to filter upcoming bookings by room type to meet specific meeting requirements.",
+            "source_turn": 12,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.7745,
+            "tfidf": 0.5589
+          },
+          {
+            "id": 16,
+            "text": "The system must allow users to filter upcoming bookings by capacity to ensure the selected room can accommodate all participants.",
+            "source_turn": 12,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.7265,
+            "tfidf": 0.502
+          }
+        ]
+      },
+      {
+        "run": "run_005",
+        "total_requirements": 17,
+        "struct_traced": 17,
+        "structural_traceability_percent": 100.0,
+        "sem_traced": 17,
+        "semantic_similarity_percent": 100.0,
+        "avg_sbert": 0.6992,
+        "avg_tfidf": 0.4963,
+        "score_percent": 100.0,
+        "requirements": [
+          {
+            "id": 1,
+            "text": "The system should allow users to quickly check the availability of meeting rooms and book them instantly without waiting for email confirmations.",
+            "source_turn": 2,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.9486,
+            "tfidf": 0.6033
+          },
+          {
+            "id": 2,
+            "text": "The system should send notifications to users when their booking is confirmed or if there are any changes.",
+            "source_turn": 2,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.4786,
+            "tfidf": 0.5325
+          },
+          {
+            "id": 3,
+            "text": "The system should allow users to search for rooms based on date, time, and capacity.",
+            "source_turn": 2,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.5615,
+            "tfidf": 0.629
+          },
+          {
+            "id": 4,
+            "text": "The system should allow users to specify the date and time of the meeting when searching for rooms.",
+            "source_turn": 4,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.5681,
+            "tfidf": 0.4284
+          },
+          {
+            "id": 5,
+            "text": "The system should allow users to filter meeting rooms based on their capacity.",
+            "source_turn": 4,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.6659,
+            "tfidf": 0.4291
+          },
+          {
+            "id": 6,
+            "text": "The system should allow users to filter rooms by features such as video conferencing capabilities or whiteboards.",
+            "source_turn": 4,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.6482,
+            "tfidf": 0.4863
+          },
+          {
+            "id": 7,
+            "text": "The system should provide real-time availability of meeting rooms to facilitate quick decision-making.",
+            "source_turn": 4,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.6912,
+            "tfidf": 0.372
+          },
+          {
+            "id": 8,
+            "text": "The system should provide visual indicators, such as color coding, to quickly assess room availability.",
+            "source_turn": 6,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.8402,
+            "tfidf": 0.5466
+          },
+          {
+            "id": 9,
+            "text": "The system should send alerts for when a room becomes available.",
+            "source_turn": 6,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.7401,
+            "tfidf": 0.4191
+          },
+          {
+            "id": 10,
+            "text": "The system must prevent double booking of the same room at the same time.",
+            "source_turn": 6,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.5926,
+            "tfidf": 0.5206
+          },
+          {
+            "id": 11,
+            "text": "The system should provide users with a clear notification when a room is unavailable, including details of the existing booking.",
+            "source_turn": 8,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.6843,
+            "tfidf": 0.4017
+          },
+          {
+            "id": 12,
+            "text": "The system should suggest alternative available rooms when a user attempts to book a room that is already reserved.",
+            "source_turn": 8,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.6778,
+            "tfidf": 0.3857
+          },
+          {
+            "id": 13,
+            "text": "The system should provide users with the ability to modify or cancel their bookings easily.",
+            "source_turn": 8,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.5715,
+            "tfidf": 0.3217
+          },
+          {
+            "id": 14,
+            "text": "The system should allow users to modify the date, time, or capacity of their bookings and also provide an option to cancel bookings entirely.",
+            "source_turn": 10,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.8834,
+            "tfidf": 0.6339
+          },
+          {
+            "id": 15,
+            "text": "The system should send confirmation notifications to users whenever they modify or cancel a booking.",
+            "source_turn": 10,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.8302,
+            "tfidf": 0.4379
+          },
+          {
+            "id": 16,
+            "text": "The system should send confirmation notifications that include specific details about modified bookings, such as updated date, time, and capacity, as well as summaries of cancellations including original booking details.",
+            "source_turn": 12,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.9646,
+            "tfidf": 0.7033
+          },
+          {
+            "id": 17,
+            "text": "The system should provide a way for users to view their upcoming bookings in a consolidated list to manage their schedule effectively and avoid potential conflicts.",
+            "source_turn": 12,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.5397,
+            "tfidf": 0.5866
+          }
+        ]
+      }
+    ]
+  },
+  "issues": {
+    "runs_evaluated": 5,
+    "score_percent": 100.0,
+    "sd": 0.0,
+    "grade": "Excellent",
+    "run_details": [
+      {
+        "run": "run_001",
+        "total_issues": 6,
+        "turn_coverage_percent": 100.0,
+        "requirement_linkage_percent": 100.0,
+        "score_percent": 100.0,
+        "severity_breakdown": {
+          "high": 1,
+          "medium": 5,
+          "low": 0,
+          "unknown": 0
+        },
+        "issues": [
+          {
+            "issue_id": 1,
+            "type": "conflict",
+            "severity": "medium",
+            "status": "open",
+            "turn_id": 4,
+            "turn_valid": true,
+            "related_req_id": "4",
+            "req_link_valid": true,
+            "description": "Jamie wants a fast, self-service experience while also recognizing the need for oversight to prevent misuse.",
+            "created_by": "Sarah"
+          },
+          {
+            "issue_id": 2,
+            "type": "conflict",
+            "severity": "high",
+            "status": "open",
+            "turn_id": 12,
+            "turn_valid": true,
+            "related_req_id": "6",
+            "req_link_valid": true,
+            "description": "Jamie wants a fast, self-service experience while also recognizing the need for oversight to prevent misuse.",
+            "created_by": "Sarah"
+          },
+          {
+            "issue_id": 3,
+            "type": "functional",
+            "severity": "medium",
+            "status": "open",
+            "turn_id": 12,
+            "turn_valid": true,
+            "related_req_id": "14",
+            "req_link_valid": true,
+            "description": "The system must provide a straightforward interface for users to access their reservations quickly.",
+            "created_by": "Sarah"
+          },
+          {
+            "issue_id": 4,
+            "type": "functional",
+            "severity": "medium",
+            "status": "open",
+            "turn_id": 12,
+            "turn_valid": true,
+            "related_req_id": "14",
+            "req_link_valid": true,
+            "description": "The system must allow users to modify the date, time, or room of their bookings.",
+            "created_by": "Sarah"
+          },
+          {
+            "issue_id": 5,
+            "type": "functional",
+            "severity": "medium",
+            "status": "open",
+            "turn_id": 12,
+            "turn_valid": true,
+            "related_req_id": "15",
+            "req_link_valid": true,
+            "description": "The system must allow users to cancel their bookings with a simple click, ideally with a confirmation prompt.",
+            "created_by": "Sarah"
+          },
+          {
+            "issue_id": 6,
+            "type": "functional",
+            "severity": "medium",
+            "status": "open",
+            "turn_id": 12,
+            "turn_valid": true,
+            "related_req_id": "16",
+            "req_link_valid": true,
+            "description": "The system must automatically release rooms if a meeting has not started within 10 minutes of the scheduled time.",
+            "created_by": "Sarah"
+          }
+        ]
+      },
+      {
+        "run": "run_002",
+        "note": "No issues found in issues_log.json",
+        "score_percent": null
+      },
+      {
+        "run": "run_003",
+        "total_issues": 5,
+        "turn_coverage_percent": 100.0,
+        "requirement_linkage_percent": 100.0,
+        "score_percent": 100.0,
+        "severity_breakdown": {
+          "high": 4,
+          "medium": 1,
+          "low": 0,
+          "unknown": 0
+        },
+        "issues": [
+          {
+            "issue_id": 1,
+            "type": "conflict",
+            "severity": "high",
+            "status": "open",
+            "turn_id": 4,
+            "turn_valid": true,
+            "related_req_id": "5",
+            "req_link_valid": true,
+            "description": "Jamie wants a fast, self-service experience while Sarah prioritizes oversight to prevent misuse of resources.",
+            "created_by": "Sarah"
+          },
+          {
+            "issue_id": 2,
+            "type": "process_gap",
+            "severity": "medium",
+            "status": "open",
+            "turn_id": 4,
+            "turn_valid": true,
+            "related_req_id": "5",
+            "req_link_valid": true,
+            "description": "Currently, there is a problem with employees booking large rooms for small meetings, leading to resource misuse.",
+            "created_by": "Sarah"
+          },
+          {
+            "issue_id": 3,
+            "type": "process_gap",
+            "severity": "high",
+            "status": "open",
+            "turn_id": 12,
+            "turn_valid": true,
+            "related_req_id": "12",
+            "req_link_valid": true,
+            "description": "The system must log the reason for cancellations if provided by the user to identify patterns or issues.",
+            "created_by": "Sarah"
+          },
+          {
+            "issue_id": 4,
+            "type": "process_gap",
+            "severity": "high",
+            "status": "open",
+            "turn_id": 12,
+            "turn_valid": true,
+            "related_req_id": "14",
+            "req_link_valid": true,
+            "description": "The system must track the frequency of no-shows for each room to inform decisions about booking policies.",
+            "created_by": "Sarah"
+          },
+          {
+            "issue_id": 5,
+            "type": "functional",
+            "severity": "high",
+            "status": "open",
+            "turn_id": 12,
+            "turn_valid": true,
+            "related_req_id": "15",
+            "req_link_valid": true,
+            "description": "The system should automatically release rooms if a meeting has not started within 10 minutes of the scheduled time.",
+            "created_by": "Sarah"
+          }
+        ]
+      },
+      {
+        "run": "run_004",
+        "total_issues": 9,
+        "turn_coverage_percent": 100.0,
+        "requirement_linkage_percent": 100.0,
+        "score_percent": 100.0,
+        "severity_breakdown": {
+          "high": 2,
+          "medium": 7,
+          "low": 0,
+          "unknown": 0
+        },
+        "issues": [
+          {
+            "issue_id": 1,
+            "type": "conflict",
+            "severity": "high",
+            "status": "open",
+            "turn_id": 4,
+            "turn_valid": true,
+            "related_req_id": "2",
+            "req_link_valid": true,
+            "description": "The need for a quick cancellation process conflicts with the office manager's need for oversight and control over bookings.",
+            "created_by": "Sarah"
+          },
+          {
+            "issue_id": 2,
+            "type": "functional",
+            "severity": "medium",
+            "status": "open",
+            "turn_id": 4,
+            "turn_valid": true,
+            "related_req_id": "2",
+            "req_link_valid": true,
+            "description": "The ability to cancel a booking quickly with minimal clicks.",
+            "created_by": "Sarah"
+          },
+          {
+            "issue_id": 3,
+            "type": "functional",
+            "severity": "medium",
+            "status": "open",
+            "turn_id": 4,
+            "turn_valid": true,
+            "related_req_id": "6",
+            "req_link_valid": true,
+            "description": "The system must provide visibility of upcoming bookings for a room to help users make informed decisions.",
+            "created_by": "Sarah"
+          },
+          {
+            "issue_id": 4,
+            "type": "process_gap",
+            "severity": "high",
+            "status": "open",
+            "turn_id": 6,
+            "turn_valid": true,
+            "related_req_id": "7",
+            "req_link_valid": true,
+            "description": "The current process for canceling a booking is lengthy and involves multiple steps, causing frustration for users.",
+            "created_by": "Jamie"
+          },
+          {
+            "issue_id": 5,
+            "type": "process_gap",
+            "severity": "medium",
+            "status": "open",
+            "turn_id": 6,
+            "turn_valid": true,
+            "related_req_id": "8",
+            "req_link_valid": true,
+            "description": "Users currently do not receive immediate feedback on the cancellation status, leading to uncertainty about whether the cancellation was successful.",
+            "created_by": "Jamie"
+          },
+          {
+            "issue_id": 6,
+            "type": "functional",
+            "severity": "medium",
+            "status": "open",
+            "turn_id": 10,
+            "turn_valid": true,
+            "related_req_id": "12",
+            "req_link_valid": true,
+            "description": "The ability to view upcoming bookings in a separate view.",
+            "created_by": "Jamie"
+          },
+          {
+            "issue_id": 7,
+            "type": "functional",
+            "severity": "medium",
+            "status": "open",
+            "turn_id": 10,
+            "turn_valid": true,
+            "related_req_id": "13",
+            "req_link_valid": true,
+            "description": "The ability to filter upcoming bookings by date and time.",
+            "created_by": "Jamie"
+          },
+          {
+            "issue_id": 8,
+            "type": "functional",
+            "severity": "medium",
+            "status": "open",
+            "turn_id": 10,
+            "turn_valid": true,
+            "related_req_id": "14",
+            "req_link_valid": true,
+            "description": "The ability to set reminders for personal bookings.",
+            "created_by": "Jamie"
+          },
+          {
+            "issue_id": 9,
+            "type": "functional",
+            "severity": "medium",
+            "status": "open",
+            "turn_id": 12,
+            "turn_valid": true,
+            "related_req_id": "16",
+            "req_link_valid": true,
+            "description": "The ability to filter upcoming bookings by capacity.",
+            "created_by": "Sarah"
+          }
+        ]
+      },
+      {
+        "run": "run_005",
+        "total_issues": 2,
+        "turn_coverage_percent": 100.0,
+        "requirement_linkage_percent": 100.0,
+        "score_percent": 100.0,
+        "severity_breakdown": {
+          "high": 2,
+          "medium": 0,
+          "low": 0,
+          "unknown": 0
+        },
+        "issues": [
+          {
+            "issue_id": 1,
+            "type": "process_gap",
+            "severity": "high",
+            "status": "open",
+            "turn_id": 8,
+            "turn_valid": true,
+            "related_req_id": "11",
+            "req_link_valid": true,
+            "description": "Users currently do not receive clear notifications when a room is unavailable, leading to confusion about existing bookings.",
+            "created_by": "Sarah"
+          },
+          {
+            "issue_id": 2,
+            "type": "process_gap",
+            "severity": "high",
+            "status": "open",
+            "turn_id": 8,
+            "turn_valid": true,
+            "related_req_id": "13",
+            "req_link_valid": true,
+            "description": "Users currently lack the ability to easily modify or cancel their bookings, which contributes to no-shows and poor room utilization.",
+            "created_by": "Sarah"
+          }
+        ]
+      }
+    ]
+  },
+  "gt_coverage": {
+    "runs_evaluated": 5,
+    "score_percent": 83.33,
+    "sd": 0.0,
+    "grade": "Good",
+    "thresholds_used": [
+      0.45,
+      0.6,
+      0.7
+    ],
+    "primary_threshold": 0.45,
+    "note": "Primary score = SBERT >= 0.45 coverage. Coverage at 0.60 and 0.70 reported for sensitivity analysis. TF-IDF reported as secondary reference only.",
+    "run_details": [
+      {
+        "run": "run_001",
+        "total_gt": 6,
+        "covered_tfidf": 3,
+        "tfidf_coverage_percent": 50.0,
+        "covered_sbert_0.45": 5,
+        "covered_sbert_0.6": 5,
+        "covered_sbert_0.7": 4,
+        "coverage_sbert_0.45_percent": 83.33,
+        "coverage_sbert_0.6_percent": 83.33,
+        "coverage_sbert_0.7_percent": 66.67,
+        "score_percent": 83.33,
+        "per_gt": [
+          {
+            "id": "R1",
+            "type": "FR",
+            "ground_truth": "Users must be able to search for available meeting rooms by date, time, and capacity.",
+            "best_sbert": 0.8288,
+            "best_tfidf": 0.4757,
+            "covered_tfidf": true,
+            "covered_0.45": true,
+            "covered_0.6": true,
+            "covered_0.7": true
+          },
+          {
+            "id": "R2",
+            "type": "FR",
+            "ground_truth": "Users must be able to book, modify, and cancel room reservations.",
+            "best_sbert": 0.768,
+            "best_tfidf": 0.1234,
+            "covered_tfidf": false,
+            "covered_0.45": true,
+            "covered_0.6": true,
+            "covered_0.7": true
+          },
+          {
+            "id": "R3",
+            "type": "FR",
+            "ground_truth": "The system must send booking confirmation and reminder notifications to the user.",
+            "best_sbert": 0.8577,
+            "best_tfidf": 0.4669,
+            "covered_tfidf": true,
+            "covered_0.45": true,
+            "covered_0.6": true,
+            "covered_0.7": true
+          },
+          {
+            "id": "R4",
+            "type": "FR",
+            "ground_truth": "The office manager must be able to view all bookings across all rooms.",
+            "best_sbert": 0.6659,
+            "best_tfidf": 0.1565,
+            "covered_tfidf": false,
+            "covered_0.45": true,
+            "covered_0.6": true,
+            "covered_0.7": false
+          },
+          {
+            "id": "R5",
+            "type": "FR",
+            "ground_truth": "The system must prevent double booking of the same room at the same time.",
+            "best_sbert": 0.9778,
+            "best_tfidf": 0.777,
+            "covered_tfidf": true,
+            "covered_0.45": true,
+            "covered_0.6": true,
+            "covered_0.7": true
+          },
+          {
+            "id": "R6",
+            "type": "NFR",
+            "ground_truth": "The system must be accessible via web and mobile.",
+            "best_sbert": 0.409,
+            "best_tfidf": 0.0691,
+            "covered_tfidf": false,
+            "covered_0.45": false,
+            "covered_0.6": false,
+            "covered_0.7": false
+          }
+        ]
+      },
+      {
+        "run": "run_002",
+        "total_gt": 6,
+        "covered_tfidf": 3,
+        "tfidf_coverage_percent": 50.0,
+        "covered_sbert_0.45": 5,
+        "covered_sbert_0.6": 4,
+        "covered_sbert_0.7": 4,
+        "coverage_sbert_0.45_percent": 83.33,
+        "coverage_sbert_0.6_percent": 66.67,
+        "coverage_sbert_0.7_percent": 66.67,
+        "score_percent": 83.33,
+        "per_gt": [
+          {
+            "id": "R1",
+            "type": "FR",
+            "ground_truth": "Users must be able to search for available meeting rooms by date, time, and capacity.",
+            "best_sbert": 0.8288,
+            "best_tfidf": 0.4729,
+            "covered_tfidf": true,
+            "covered_0.45": true,
+            "covered_0.6": true,
+            "covered_0.7": true
+          },
+          {
+            "id": "R2",
+            "type": "FR",
+            "ground_truth": "Users must be able to book, modify, and cancel room reservations.",
+            "best_sbert": 0.7952,
+            "best_tfidf": 0.1337,
+            "covered_tfidf": false,
+            "covered_0.45": true,
+            "covered_0.6": true,
+            "covered_0.7": true
+          },
+          {
+            "id": "R3",
+            "type": "FR",
+            "ground_truth": "The system must send booking confirmation and reminder notifications to the user.",
+            "best_sbert": 0.9113,
+            "best_tfidf": 0.5384,
+            "covered_tfidf": true,
+            "covered_0.45": true,
+            "covered_0.6": true,
+            "covered_0.7": true
+          },
+          {
+            "id": "R4",
+            "type": "FR",
+            "ground_truth": "The office manager must be able to view all bookings across all rooms.",
+            "best_sbert": 0.5553,
+            "best_tfidf": 0.0684,
+            "covered_tfidf": false,
+            "covered_0.45": true,
+            "covered_0.6": false,
+            "covered_0.7": false
+          },
+          {
+            "id": "R5",
+            "type": "FR",
+            "ground_truth": "The system must prevent double booking of the same room at the same time.",
+            "best_sbert": 0.9819,
+            "best_tfidf": 0.899,
+            "covered_tfidf": true,
+            "covered_0.45": true,
+            "covered_0.6": true,
+            "covered_0.7": true
+          },
+          {
+            "id": "R6",
+            "type": "NFR",
+            "ground_truth": "The system must be accessible via web and mobile.",
+            "best_sbert": 0.3696,
+            "best_tfidf": 0.072,
+            "covered_tfidf": false,
+            "covered_0.45": false,
+            "covered_0.6": false,
+            "covered_0.7": false
+          }
+        ]
+      },
+      {
+        "run": "run_003",
+        "total_gt": 6,
+        "covered_tfidf": 2,
+        "tfidf_coverage_percent": 33.33,
+        "covered_sbert_0.45": 5,
+        "covered_sbert_0.6": 5,
+        "covered_sbert_0.7": 4,
+        "coverage_sbert_0.45_percent": 83.33,
+        "coverage_sbert_0.6_percent": 83.33,
+        "coverage_sbert_0.7_percent": 66.67,
+        "score_percent": 83.33,
+        "per_gt": [
+          {
+            "id": "R1",
+            "type": "FR",
+            "ground_truth": "Users must be able to search for available meeting rooms by date, time, and capacity.",
+            "best_sbert": 0.8288,
+            "best_tfidf": 0.4497,
+            "covered_tfidf": true,
+            "covered_0.45": true,
+            "covered_0.6": true,
+            "covered_0.7": true
+          },
+          {
+            "id": "R2",
+            "type": "FR",
+            "ground_truth": "Users must be able to book, modify, and cancel room reservations.",
+            "best_sbert": 0.7002,
+            "best_tfidf": 0.0704,
+            "covered_tfidf": false,
+            "covered_0.45": true,
+            "covered_0.6": true,
+            "covered_0.7": true
+          },
+          {
+            "id": "R3",
+            "type": "FR",
+            "ground_truth": "The system must send booking confirmation and reminder notifications to the user.",
+            "best_sbert": 0.8577,
+            "best_tfidf": 0.1584,
+            "covered_tfidf": false,
+            "covered_0.45": true,
+            "covered_0.6": true,
+            "covered_0.7": true
+          },
+          {
+            "id": "R4",
+            "type": "FR",
+            "ground_truth": "The office manager must be able to view all bookings across all rooms.",
+            "best_sbert": 0.6708,
+            "best_tfidf": 0.1108,
+            "covered_tfidf": false,
+            "covered_0.45": true,
+            "covered_0.6": true,
+            "covered_0.7": false
+          },
+          {
+            "id": "R5",
+            "type": "FR",
+            "ground_truth": "The system must prevent double booking of the same room at the same time.",
+            "best_sbert": 0.9475,
+            "best_tfidf": 0.7063,
+            "covered_tfidf": true,
+            "covered_0.45": true,
+            "covered_0.6": true,
+            "covered_0.7": true
+          },
+          {
+            "id": "R6",
+            "type": "NFR",
+            "ground_truth": "The system must be accessible via web and mobile.",
+            "best_sbert": 0.3696,
+            "best_tfidf": 0.0792,
+            "covered_tfidf": false,
+            "covered_0.45": false,
+            "covered_0.6": false,
+            "covered_0.7": false
+          }
+        ]
+      },
+      {
+        "run": "run_004",
+        "total_gt": 6,
+        "covered_tfidf": 2,
+        "tfidf_coverage_percent": 33.33,
+        "covered_sbert_0.45": 5,
+        "covered_sbert_0.6": 5,
+        "covered_sbert_0.7": 4,
+        "coverage_sbert_0.45_percent": 83.33,
+        "coverage_sbert_0.6_percent": 83.33,
+        "coverage_sbert_0.7_percent": 66.67,
+        "score_percent": 83.33,
+        "per_gt": [
+          {
+            "id": "R1",
+            "type": "FR",
+            "ground_truth": "Users must be able to search for available meeting rooms by date, time, and capacity.",
+            "best_sbert": 0.7062,
+            "best_tfidf": 0.1636,
+            "covered_tfidf": false,
+            "covered_0.45": true,
+            "covered_0.6": true,
+            "covered_0.7": true
+          },
+          {
+            "id": "R2",
+            "type": "FR",
+            "ground_truth": "Users must be able to book, modify, and cancel room reservations.",
+            "best_sbert": 0.8312,
+            "best_tfidf": 0.2269,
+            "covered_tfidf": true,
+            "covered_0.45": true,
+            "covered_0.6": true,
+            "covered_0.7": true
+          },
+          {
+            "id": "R3",
+            "type": "FR",
+            "ground_truth": "The system must send booking confirmation and reminder notifications to the user.",
+            "best_sbert": 0.8613,
+            "best_tfidf": 0.1893,
+            "covered_tfidf": false,
+            "covered_0.45": true,
+            "covered_0.6": true,
+            "covered_0.7": true
+          },
+          {
+            "id": "R4",
+            "type": "FR",
+            "ground_truth": "The office manager must be able to view all bookings across all rooms.",
+            "best_sbert": 0.6389,
+            "best_tfidf": 0.1103,
+            "covered_tfidf": false,
+            "covered_0.45": true,
+            "covered_0.6": true,
+            "covered_0.7": false
+          },
+          {
+            "id": "R5",
+            "type": "FR",
+            "ground_truth": "The system must prevent double booking of the same room at the same time.",
+            "best_sbert": 0.9184,
+            "best_tfidf": 0.2952,
+            "covered_tfidf": true,
+            "covered_0.45": true,
+            "covered_0.6": true,
+            "covered_0.7": true
+          },
+          {
+            "id": "R6",
+            "type": "NFR",
+            "ground_truth": "The system must be accessible via web and mobile.",
+            "best_sbert": 0.3962,
+            "best_tfidf": 0.068,
+            "covered_tfidf": false,
+            "covered_0.45": false,
+            "covered_0.6": false,
+            "covered_0.7": false
+          }
+        ]
+      },
+      {
+        "run": "run_005",
+        "total_gt": 6,
+        "covered_tfidf": 3,
+        "tfidf_coverage_percent": 50.0,
+        "covered_sbert_0.45": 5,
+        "covered_sbert_0.6": 4,
+        "covered_sbert_0.7": 4,
+        "coverage_sbert_0.45_percent": 83.33,
+        "coverage_sbert_0.6_percent": 66.67,
+        "coverage_sbert_0.7_percent": 66.67,
+        "score_percent": 83.33,
+        "per_gt": [
+          {
+            "id": "R1",
+            "type": "FR",
+            "ground_truth": "Users must be able to search for available meeting rooms by date, time, and capacity.",
+            "best_sbert": 0.8378,
+            "best_tfidf": 0.4373,
+            "covered_tfidf": true,
+            "covered_0.45": true,
+            "covered_0.6": true,
+            "covered_0.7": true
+          },
+          {
+            "id": "R2",
+            "type": "FR",
+            "ground_truth": "Users must be able to book, modify, and cancel room reservations.",
+            "best_sbert": 0.8102,
+            "best_tfidf": 0.106,
+            "covered_tfidf": false,
+            "covered_0.45": true,
+            "covered_0.6": true,
+            "covered_0.7": true
+          },
+          {
+            "id": "R3",
+            "type": "FR",
+            "ground_truth": "The system must send booking confirmation and reminder notifications to the user.",
+            "best_sbert": 0.8577,
+            "best_tfidf": 0.214,
+            "covered_tfidf": true,
+            "covered_0.45": true,
+            "covered_0.6": true,
+            "covered_0.7": true
+          },
+          {
+            "id": "R4",
+            "type": "FR",
+            "ground_truth": "The office manager must be able to view all bookings across all rooms.",
+            "best_sbert": 0.5628,
+            "best_tfidf": 0.0873,
+            "covered_tfidf": false,
+            "covered_0.45": true,
+            "covered_0.6": false,
+            "covered_0.7": false
+          },
+          {
+            "id": "R5",
+            "type": "FR",
+            "ground_truth": "The system must prevent double booking of the same room at the same time.",
+            "best_sbert": 1.0,
+            "best_tfidf": 1.0,
+            "covered_tfidf": true,
+            "covered_0.45": true,
+            "covered_0.6": true,
+            "covered_0.7": true
+          },
+          {
+            "id": "R6",
+            "type": "NFR",
+            "ground_truth": "The system must be accessible via web and mobile.",
+            "best_sbert": 0.4048,
+            "best_tfidf": 0.0957,
+            "covered_tfidf": false,
+            "covered_0.45": false,
+            "covered_0.6": false,
+            "covered_0.7": false
+          }
+        ]
+      }
+    ]
+  },
+  "req_reproducibility": {
+    "runs_compared": 5,
+    "pairs_evaluated": 10,
+    "avg_score_percent": 78.87,
+    "sd": 4.0343,
+    "grade": "Good",
+    "method": "SBERT (all-MiniLM-L6-v2)",
+    "interpretation": "Measures whether the same requirements were elicited across runs, regardless of wording.",
+    "pair_details": [
+      {
+        "pair": "run_001 vs run_002",
+        "reqs_run_a": 16,
+        "reqs_run_b": 15,
+        "ab_best_match_percent": 85.46,
+        "ba_best_match_percent": 85.21,
+        "symmetric_score_percent": 85.33,
+        "method": "SBERT"
+      },
+      {
+        "pair": "run_001 vs run_003",
+        "reqs_run_a": 16,
+        "reqs_run_b": 15,
+        "ab_best_match_percent": 81.24,
+        "ba_best_match_percent": 82.68,
+        "symmetric_score_percent": 81.96,
+        "method": "SBERT"
+      },
+      {
+        "pair": "run_001 vs run_004",
+        "reqs_run_a": 16,
+        "reqs_run_b": 16,
+        "ab_best_match_percent": 77.08,
+        "ba_best_match_percent": 76.09,
+        "symmetric_score_percent": 76.58,
+        "method": "SBERT"
+      },
+      {
+        "pair": "run_001 vs run_005",
+        "reqs_run_a": 16,
+        "reqs_run_b": 17,
+        "ab_best_match_percent": 84.22,
+        "ba_best_match_percent": 82.94,
+        "symmetric_score_percent": 83.58,
+        "method": "SBERT"
+      },
+      {
+        "pair": "run_002 vs run_003",
+        "reqs_run_a": 15,
+        "reqs_run_b": 15,
+        "ab_best_match_percent": 80.61,
+        "ba_best_match_percent": 75.21,
+        "symmetric_score_percent": 77.91,
+        "method": "SBERT"
+      },
+      {
+        "pair": "run_002 vs run_004",
+        "reqs_run_a": 15,
+        "reqs_run_b": 16,
+        "ab_best_match_percent": 76.38,
+        "ba_best_match_percent": 74.93,
+        "symmetric_score_percent": 75.65,
+        "method": "SBERT"
+      },
+      {
+        "pair": "run_002 vs run_005",
+        "reqs_run_a": 15,
+        "reqs_run_b": 17,
+        "ab_best_match_percent": 82.65,
+        "ba_best_match_percent": 81.91,
+        "symmetric_score_percent": 82.28,
+        "method": "SBERT"
+      },
+      {
+        "pair": "run_003 vs run_004",
+        "reqs_run_a": 15,
+        "reqs_run_b": 16,
+        "ab_best_match_percent": 72.93,
+        "ba_best_match_percent": 70.16,
+        "symmetric_score_percent": 71.55,
+        "method": "SBERT"
+      },
+      {
+        "pair": "run_003 vs run_005",
+        "reqs_run_a": 15,
+        "reqs_run_b": 17,
+        "ab_best_match_percent": 75.23,
+        "ba_best_match_percent": 78.75,
+        "symmetric_score_percent": 76.99,
+        "method": "SBERT"
+      },
+      {
+        "pair": "run_004 vs run_005",
+        "reqs_run_a": 16,
+        "reqs_run_b": 17,
+        "ab_best_match_percent": 76.79,
+        "ba_best_match_percent": 76.97,
+        "symmetric_score_percent": 76.88,
+        "method": "SBERT"
+      }
+    ]
+  },
+  "summary": {
+    "dimension_scores": {
+      "feasibility": 100.0,
+      "structural_reproducibility": 100.0,
+      "semantic_reproducibility_sbert": 65.84,
+      "requirement_content_reproducibility": 78.87,
+      "traceability": 100.0,
+      "issues_traceability": 100.0,
+      "gt_coverage_sbert_0_45": 83.33
+    },
+    "overall_mean_percent": 89.72,
+    "overall_grade": "Good"
+  }
+}

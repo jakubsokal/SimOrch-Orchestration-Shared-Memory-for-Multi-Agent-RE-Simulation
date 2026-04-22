@@ -32,7 +32,6 @@ const ConfigCard: FC<ConfigCardProps> = ({ config }) => {
     const agents = [...reAgents, ...userAgents];
 
     function isREAgent(agent: AnyAgentConfig): agent is REAgentConfig {
-        console.log('Checking if agent is RE Agent:', agent);
         return agent.role === AgentType.REQUIREMENTS_ENGINEER;
     }
 

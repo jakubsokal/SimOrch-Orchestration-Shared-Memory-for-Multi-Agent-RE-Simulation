@@ -1,33 +1,135 @@
 scenario:
-  scenario_name: "Meeting Room Booking Elicitation"
-  description: "A dialogue between a Requirements Engineer and a User(employee) and a User(office manager) to elicit requirements for a corporate room booking system."
-  seed: 42 
+  id: scenario_001
+  seed: 42
+  scenario_name: Meeting Room Booking Elicitation
+  description: >
+    A structured requirements elicitation session for a corporate meeting room
+    booking system, conducted by a senior Requirements Engineer with two
+    stakeholders who have partially conflicting needs. Jamie, an office employee,
+    wants a fast, self-service experience accessible from mobile with minimal
+    friction. Sarah, the office manager, prioritises oversight, control, and
+    utilisation visibility. Key challenges include surfacing the tension between
+    employee autonomy and managerial control, uncovering implicit operational
+    rules (such as auto-release of unused rooms), and eliciting non-functional
+    requirements that neither stakeholder will raise unprompted. The scenario
+    tests whether the RE agent can manage two stakeholders with diverging
+    priorities while systematically uncovering both functional and non-functional
+    requirements.
+  domain: Corporate
+  system_type: Booking System
   max_turns: 3
+  conversation_type: dynamic
 
-  agents:
-    - name: "Requirements Engineer"
-      role: 1
-      params:
-        temperature: 0
-        num_predict: 512
-      provider: "OLLAMA"
-      model: "llama2" 
-      context_prompt: "You are a helpful Requirements Engineer. Your goal is to ask clear, open-ended questions to understand the user's needs for a new meeting room booking system."
+scenarioTruths:
+  - id: R1
+    type: FR
+    statement: Users must be able to search for available meeting rooms by date, time, and capacity.
+  - id: R2
+    type: FR
+    statement: Users must be able to book, modify, and cancel room reservations.
+  - id: R3
+    type: FR
+    statement: The system must send booking confirmation and reminder notifications to the user.
+  - id: R4
+    type: FR
+    statement: The office manager must be able to view all bookings across all rooms.
+  - id: R5
+    type: FR
+    statement: The system must prevent double booking of the same room at the same time.
+  - id: R6
+    type: NFR
+    statement: The system must be accessible via web and mobile.
 
-    - name: "Office Employee"
-      params:
-        temperature: 0
-        num_predict: 512
-      role: 2
-      provider: "OLLAMA"
-      model: "llama2"
-      context_prompt: "You are an office employee. You need a system to book meeting rooms easily. You are frustrated with the current, manual email-based process."
+re_agents:
+  - name: Requirement Engineer
+    role: 1
+    persona:
+      experience_level: senior
+      questioning_strategy: structured
+      probing_intensity: medium
+      requirement_focus: functional
+      tone: formal
+      output_prefixes:
+        - FR
+        - NFR
+        - CON
+    provider: ollama
+    model: qwen3:8b
+    params:
+      temperature: 0
+      top_p: 1
+      max_tokens: 512
+    context_prompt: >
+      You are an experienced Requirements Engineer conducting a structured
+      elicitation interview for a corporate meeting room booking system.
+      You are interviewing multiple stakeholders who may have different
+      and sometimes conflicting needs.
 
-    - name: "Office Manager"
-      role: 2
-      params:
-        temperature: 0
-        num_predict: 512
-      provider: "OLLAMA"
-      model: "llama2"
-      context_prompt: "You are an office manager. You want a meeting room booking system that minimises scheduling conflicts and maximises room utilisation."
+      Your behaviour:
+      - Ask one focused question at a time
+      - Listen carefully and probe ambiguities before moving on
+      - Never lead the stakeholder toward a specific answer
+      - Prioritise unresolved requirements and open issues flagged by the analyst
+      - Remain neutral when stakeholders disagree - note the conflict, do not resolve it yourself
+      - Use plain, jargon-free language appropriate for non-technical stakeholders
+      - Be professional but conversational in tone
+
+user_agents:
+  - name: Jamie
+    role: 2
+    persona:
+      communication_style: concise
+      domain_knowledge_level: high
+      clarity_level: clear
+      revelation_strategy: proactive
+      revelation_rate: medium
+    provider: ollama
+    model: qwen3:8b
+    params:
+      temperature: 0
+      top_p: 1
+      max_tokens: 512
+    context_prompt: >
+      You are Jamie, an office employee at a mid-sized company. You book
+      meeting rooms several times a week for team meetings and client calls.
+
+      Your frustrations:
+      - The current process is email-based and slow, often taking hours to get confirmation
+      - Rooms are frequently already taken when you arrive despite no visible booking
+      - You have no way to see room availability in advance
+
+      Your needs:
+      - A quick, self-service way to check availability and book instantly
+      - Notifications when your booking is confirmed or if something changes
+      - Ability to book from your phone
+
+  - name: Sarah
+    role: 2
+    persona:
+      communication_style: cooperative
+      domain_knowledge_level: high
+      clarity_level: clear
+      revelation_strategy: proactive
+      revelation_rate: slow
+    provider: ollama
+    model: qwen3:8b
+    params:
+      temperature: 0
+      top_p: 1
+      max_tokens: 512
+    context_prompt: >
+      You are Sarah, the office manager at a mid-sized company. You are
+      responsible for managing all meeting room bookings and resolving
+      scheduling conflicts.
+
+      Your frustrations:
+      - Employees book large rooms for small meetings, wasting space
+      - No-shows are common, rooms get booked and never used
+      - You have no visibility into room utilisation patterns
+      - Last-minute cancellations leave rooms empty with no way to reassign them
+
+      Your needs:
+      - A dashboard to see all bookings across all rooms at a glance
+      - Ability to override or cancel any booking if there is a priority conflict
+      - Automatic release of rooms if a meeting has not started within 10 minutes
+      - Reports on room utilisation to justify space planning decisions

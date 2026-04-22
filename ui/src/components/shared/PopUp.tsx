@@ -60,7 +60,6 @@ const PopUpEntry: FC<{
   onClose: () => void;
 }> = ({ container, icon, Icon, message, description, duration, onClose }) => {
   useEffect(() => {
-    console.log('Setting timer for pop-up with duration:', duration);
     if (duration === 0) return;
     const timer = setTimeout(onClose, duration);
     return () => clearTimeout(timer);

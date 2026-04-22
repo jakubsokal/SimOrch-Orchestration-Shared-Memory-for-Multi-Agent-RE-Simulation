@@ -1,0 +1,1641 @@
+{
+  "generated_at": "2026-04-13T17:45:16.687604",
+  "runs_dir": "scenario_002",
+  "scenario_yaml": "scenario_002.yaml",
+  "feasibility": {
+    "total_runs": 5,
+    "successful_runs": 5,
+    "failed_runs": 0,
+    "completion_rate_percent": 100.0,
+    "behavioural_validity_avg_percent": 100.0,
+    "behavioural_validity_sd": 0.0,
+    "score_percent": 100.0,
+    "grade": "Excellent",
+    "details": [
+      {
+        "run": "run_001",
+        "status": "completed",
+        "status_source": "run_details.json",
+        "completed": true,
+        "messages": 14,
+        "turns": 14,
+        "seed": 7,
+        "reproducible_flag": true,
+        "behavioural_validity": {
+          "checks": {
+            "B1_all_agents_contributed": true,
+            "B2_turn_alternation": true,
+            "B3_no_consecutive_duplicates": true,
+            "B4_re_question_rate": true,
+            "B5_extraction_coverage": true
+          },
+          "passed": 5,
+          "total": 5,
+          "score_percent": 100.0,
+          "re_question_rate": 1.0,
+          "extraction_coverage": 0.8571,
+          "notes": []
+        },
+        "warnings": [],
+        "errors": []
+      },
+      {
+        "run": "run_002",
+        "status": "completed",
+        "status_source": "run_details.json",
+        "completed": true,
+        "messages": 14,
+        "turns": 14,
+        "seed": 7,
+        "reproducible_flag": true,
+        "behavioural_validity": {
+          "checks": {
+            "B1_all_agents_contributed": true,
+            "B2_turn_alternation": true,
+            "B3_no_consecutive_duplicates": true,
+            "B4_re_question_rate": true,
+            "B5_extraction_coverage": true
+          },
+          "passed": 5,
+          "total": 5,
+          "score_percent": 100.0,
+          "re_question_rate": 1.0,
+          "extraction_coverage": 1.0,
+          "notes": []
+        },
+        "warnings": [],
+        "errors": []
+      },
+      {
+        "run": "run_003",
+        "status": "completed",
+        "status_source": "run_details.json",
+        "completed": true,
+        "messages": 14,
+        "turns": 14,
+        "seed": 7,
+        "reproducible_flag": true,
+        "behavioural_validity": {
+          "checks": {
+            "B1_all_agents_contributed": true,
+            "B2_turn_alternation": true,
+            "B3_no_consecutive_duplicates": true,
+            "B4_re_question_rate": true,
+            "B5_extraction_coverage": true
+          },
+          "passed": 5,
+          "total": 5,
+          "score_percent": 100.0,
+          "re_question_rate": 1.0,
+          "extraction_coverage": 1.0,
+          "notes": []
+        },
+        "warnings": [],
+        "errors": []
+      },
+      {
+        "run": "run_004",
+        "status": "completed",
+        "status_source": "run_details.json",
+        "completed": true,
+        "messages": 14,
+        "turns": 14,
+        "seed": 7,
+        "reproducible_flag": true,
+        "behavioural_validity": {
+          "checks": {
+            "B1_all_agents_contributed": true,
+            "B2_turn_alternation": true,
+            "B3_no_consecutive_duplicates": true,
+            "B4_re_question_rate": true,
+            "B5_extraction_coverage": true
+          },
+          "passed": 5,
+          "total": 5,
+          "score_percent": 100.0,
+          "re_question_rate": 1.0,
+          "extraction_coverage": 1.0,
+          "notes": []
+        },
+        "warnings": [],
+        "errors": []
+      },
+      {
+        "run": "run_005",
+        "status": "completed",
+        "status_source": "run_details.json",
+        "completed": true,
+        "messages": 14,
+        "turns": 14,
+        "seed": 7,
+        "reproducible_flag": true,
+        "behavioural_validity": {
+          "checks": {
+            "B1_all_agents_contributed": true,
+            "B2_turn_alternation": true,
+            "B3_no_consecutive_duplicates": true,
+            "B4_re_question_rate": true,
+            "B5_extraction_coverage": true
+          },
+          "passed": 5,
+          "total": 5,
+          "score_percent": 100.0,
+          "re_question_rate": 1.0,
+          "extraction_coverage": 0.8571,
+          "notes": []
+        },
+        "warnings": [],
+        "errors": []
+      }
+    ]
+  },
+  "reproducibility": {
+    "runs_compared": 5,
+    "pairs_evaluated": 10,
+    "structural": {
+      "average_percent": 100.0,
+      "sd": 0.0,
+      "grade": "Excellent",
+      "note": "Orchestrator determinism turn count and agent order."
+    },
+    "semantic": {
+      "method": "SBERT (all-MiniLM-L6-v2)",
+      "average_percent": 60.24,
+      "sd": 5.5993,
+      "grade": "Satisfactory",
+      "note": "Primary metric meaning equivalence across runs."
+    },
+    "lexical_reference": {
+      "method": "difflib",
+      "average_percent": 22.25,
+      "note": "Reference baseline only therefore not graded."
+    },
+    "pair_details": [
+      {
+        "pair": "run_001 vs run_002",
+        "structural_similarity_percent": 100.0,
+        "lexical_percent": 21.42,
+        "messages_run_a": 14,
+        "messages_run_b": 14,
+        "turns_compared": 14,
+        "sbert_percent": 52.82
+      },
+      {
+        "pair": "run_001 vs run_003",
+        "structural_similarity_percent": 100.0,
+        "lexical_percent": 27.06,
+        "messages_run_a": 14,
+        "messages_run_b": 14,
+        "turns_compared": 14,
+        "sbert_percent": 62.21
+      },
+      {
+        "pair": "run_001 vs run_004",
+        "structural_similarity_percent": 100.0,
+        "lexical_percent": 16.1,
+        "messages_run_a": 14,
+        "messages_run_b": 14,
+        "turns_compared": 14,
+        "sbert_percent": 63.68
+      },
+      {
+        "pair": "run_001 vs run_005",
+        "structural_similarity_percent": 100.0,
+        "lexical_percent": 23.02,
+        "messages_run_a": 14,
+        "messages_run_b": 14,
+        "turns_compared": 14,
+        "sbert_percent": 60.54
+      },
+      {
+        "pair": "run_002 vs run_003",
+        "structural_similarity_percent": 100.0,
+        "lexical_percent": 21.81,
+        "messages_run_a": 14,
+        "messages_run_b": 14,
+        "turns_compared": 14,
+        "sbert_percent": 56.07
+      },
+      {
+        "pair": "run_002 vs run_004",
+        "structural_similarity_percent": 100.0,
+        "lexical_percent": 14.66,
+        "messages_run_a": 14,
+        "messages_run_b": 14,
+        "turns_compared": 14,
+        "sbert_percent": 55.51
+      },
+      {
+        "pair": "run_002 vs run_005",
+        "structural_similarity_percent": 100.0,
+        "lexical_percent": 24.12,
+        "messages_run_a": 14,
+        "messages_run_b": 14,
+        "turns_compared": 14,
+        "sbert_percent": 51.54
+      },
+      {
+        "pair": "run_003 vs run_004",
+        "structural_similarity_percent": 100.0,
+        "lexical_percent": 18.18,
+        "messages_run_a": 14,
+        "messages_run_b": 14,
+        "turns_compared": 14,
+        "sbert_percent": 67.98
+      },
+      {
+        "pair": "run_003 vs run_005",
+        "structural_similarity_percent": 100.0,
+        "lexical_percent": 28.31,
+        "messages_run_a": 14,
+        "messages_run_b": 14,
+        "turns_compared": 14,
+        "sbert_percent": 66.33
+      },
+      {
+        "pair": "run_004 vs run_005",
+        "structural_similarity_percent": 100.0,
+        "lexical_percent": 27.82,
+        "messages_run_a": 14,
+        "messages_run_b": 14,
+        "turns_compared": 14,
+        "sbert_percent": 65.74
+      }
+    ]
+  },
+  "traceability": {
+    "runs_evaluated": 5,
+    "score_percent": 100.0,
+    "sd": 0.0,
+    "grade": "Excellent",
+    "run_details": [
+      {
+        "run": "run_001",
+        "total_requirements": 6,
+        "struct_traced": 6,
+        "structural_traceability_percent": 100.0,
+        "sem_traced": 6,
+        "semantic_similarity_percent": 100.0,
+        "avg_sbert": 0.7178,
+        "avg_tfidf": 0.5201,
+        "score_percent": 100.0,
+        "requirements": [
+          {
+            "id": 1,
+            "text": "A central system to log every IT asset with details such as asset type, serial number, and purchase date, and to manage the assignment and unassignment of assets to employees while maintaining a record of those assignments.",
+            "source_turn": 2,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.9504,
+            "tfidf": 0.6894
+          },
+          {
+            "id": 2,
+            "text": "A system to alert IT coordinators of unreturned or incorrectly assigned assets.",
+            "source_turn": 4,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.6849,
+            "tfidf": 0.4983
+          },
+          {
+            "id": 3,
+            "text": "The system should provide a clear action item for follow-up, such as notifying the assigned employee or flagging the asset for review.",
+            "source_turn": 8,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.7088,
+            "tfidf": 0.6495
+          },
+          {
+            "id": 4,
+            "text": "The system should support multiple delivery methods for notifications, in addition to email.",
+            "source_turn": 10,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.4787,
+            "tfidf": 0.5049
+          },
+          {
+            "id": 5,
+            "text": "The system should allow users to receive notifications via email.",
+            "source_turn": 12,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.7451,
+            "tfidf": 0.3832
+          },
+          {
+            "id": 6,
+            "text": "The system should allow users to receive critical alerts via email.",
+            "source_turn": 14,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.7391,
+            "tfidf": 0.395
+          }
+        ]
+      },
+      {
+        "run": "run_002",
+        "total_requirements": 9,
+        "struct_traced": 9,
+        "structural_traceability_percent": 100.0,
+        "sem_traced": 9,
+        "semantic_similarity_percent": 100.0,
+        "avg_sbert": 0.7824,
+        "avg_tfidf": 0.6431,
+        "score_percent": 100.0,
+        "requirements": [
+          {
+            "id": 1,
+            "text": "A central system to log every IT asset with full details such as asset type, serial number, and purchase date, and to manage asset assignments to employees.",
+            "source_turn": 2,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 1.0,
+            "tfidf": 1.0
+          },
+          {
+            "id": 2,
+            "text": "The system should capture detailed records of asset assignments, including the employee's name, assignment date, unassignment date, and notes on the asset's condition or usage history.",
+            "source_turn": 4,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.9645,
+            "tfidf": 0.7772
+          },
+          {
+            "id": 3,
+            "text": "A checklist for onboarding new employees that automatically assigns necessary assets based on their role.",
+            "source_turn": 6,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.7624,
+            "tfidf": 0.4474
+          },
+          {
+            "id": 4,
+            "text": "A system feature that generates a list of all assets assigned to departing employees for easier tracking and retrieval.",
+            "source_turn": 6,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.7244,
+            "tfidf": 0.4838
+          },
+          {
+            "id": 5,
+            "text": "The system should determine necessary assets based on predefined role profiles that specify which equipment is standard for each position.",
+            "source_turn": 8,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.7132,
+            "tfidf": 0.6609
+          },
+          {
+            "id": 6,
+            "text": "The system should maintain attributes like standard software requirements and any special peripherals necessary for certain roles.",
+            "source_turn": 10,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.6445,
+            "tfidf": 0.5786
+          },
+          {
+            "id": 7,
+            "text": "A process for periodic reviews of role profiles to confirm or update equipment needs based on team changes.",
+            "source_turn": 12,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.7437,
+            "tfidf": 0.5973
+          },
+          {
+            "id": 8,
+            "text": "A notification system for IT to receive alerts when a role profile is outdated or when a new position is created.",
+            "source_turn": 12,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.6713,
+            "tfidf": 0.6015
+          },
+          {
+            "id": 9,
+            "text": "The notification system should trigger alerts for role profiles that haven't been reviewed in the last quarter or when a new position is added, notifying the IT team and department heads.",
+            "source_turn": 14,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.8179,
+            "tfidf": 0.6408
+          }
+        ]
+      },
+      {
+        "run": "run_003",
+        "total_requirements": 12,
+        "struct_traced": 12,
+        "structural_traceability_percent": 100.0,
+        "sem_traced": 12,
+        "semantic_similarity_percent": 100.0,
+        "avg_sbert": 0.6789,
+        "avg_tfidf": 0.5792,
+        "score_percent": 100.0,
+        "requirements": [
+          {
+            "id": 1,
+            "text": "A central system to log every IT asset with full details such as asset type, serial number, and purchase date, and to manage the assignment and unassignment of assets to employees while maintaining a record of those assignments.",
+            "source_turn": 2,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 1.0,
+            "tfidf": 1.0
+          },
+          {
+            "id": 2,
+            "text": "The system should automatically update the asset's status to 'available' when unassigned and log the date of unassignment.",
+            "source_turn": 4,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.8374,
+            "tfidf": 0.6118
+          },
+          {
+            "id": 3,
+            "text": "The system should record who unassigned the asset.",
+            "source_turn": 4,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.7071,
+            "tfidf": 0.362
+          },
+          {
+            "id": 4,
+            "text": "The system should provide an option to note the reason for the unassignment.",
+            "source_turn": 4,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.3904,
+            "tfidf": 0.563
+          },
+          {
+            "id": 5,
+            "text": "The system should update the asset's status to 'assigned' when an asset is assigned to an employee, log the date of assignment, and record which employee it was assigned to, while maintaining a history of all previous assignments for that asset.",
+            "source_turn": 6,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.9045,
+            "tfidf": 0.7198
+          },
+          {
+            "id": 6,
+            "text": "The system should automatically generate a list of all assets assigned to an employee when they leave the company, log the date of departure, and maintain a record of who initiated the offboarding process.",
+            "source_turn": 8,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.6368,
+            "tfidf": 0.5977
+          },
+          {
+            "id": 7,
+            "text": "The system should notify IT staff of assets that need to be retrieved during the offboarding process and provide a checklist for this process.",
+            "source_turn": 10,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.9349,
+            "tfidf": 0.7083
+          },
+          {
+            "id": 8,
+            "text": "The system should track the status of each asset during the retrieval process, indicating whether it has been returned or is still outstanding.",
+            "source_turn": 10,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.6775,
+            "tfidf": 0.7542
+          },
+          {
+            "id": 9,
+            "text": "The system should include the date of the employee's departure in the notifications sent to IT staff.",
+            "source_turn": 12,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.4578,
+            "tfidf": 0.3269
+          },
+          {
+            "id": 10,
+            "text": "The system should remind IT staff of any deadlines for retrieving assets in the notifications.",
+            "source_turn": 12,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.5545,
+            "tfidf": 0.3742
+          },
+          {
+            "id": 11,
+            "text": "The system should communicate asset retrieval deadlines in notifications.",
+            "source_turn": 14,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.4793,
+            "tfidf": 0.3662
+          },
+          {
+            "id": 12,
+            "text": "The system should flag specific asset types that require quicker retrieval.",
+            "source_turn": 14,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.5663,
+            "tfidf": 0.5663
+          }
+        ]
+      },
+      {
+        "run": "run_004",
+        "total_requirements": 12,
+        "struct_traced": 12,
+        "structural_traceability_percent": 100.0,
+        "sem_traced": 12,
+        "semantic_similarity_percent": 100.0,
+        "avg_sbert": 0.7714,
+        "avg_tfidf": 0.5904,
+        "score_percent": 100.0,
+        "requirements": [
+          {
+            "id": 1,
+            "text": "A central system to log every IT asset with full details such as asset type, serial number, and purchase date, and to manage the assignment and unassignment of assets to employees while maintaining a record of those assignments.",
+            "source_turn": 2,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 1.0,
+            "tfidf": 1.0
+          },
+          {
+            "id": 2,
+            "text": "The system should log the return date and update the asset's status when an asset is unassigned.",
+            "source_turn": 4,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.6811,
+            "tfidf": 0.6647
+          },
+          {
+            "id": 3,
+            "text": "The system should maintain a history of all changes for audit purposes.",
+            "source_turn": 4,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.5474,
+            "tfidf": 0.4353
+          },
+          {
+            "id": 4,
+            "text": "The system should provide a reliable process for asset management.",
+            "source_turn": 6,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.7044,
+            "tfidf": 0.4784
+          },
+          {
+            "id": 5,
+            "text": "The system should implement features that log every asset's assignment and unassignment, including timestamps.",
+            "source_turn": 8,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.7749,
+            "tfidf": 0.5026
+          },
+          {
+            "id": 6,
+            "text": "The system should maintain a full audit trail of all changes made to asset records, including repairs and disposals.",
+            "source_turn": 8,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.6908,
+            "tfidf": 0.5233
+          },
+          {
+            "id": 7,
+            "text": "The system should provide automated alerts for upcoming offboarding processes to ensure all assets are retrieved from departing employees.",
+            "source_turn": 8,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.7672,
+            "tfidf": 0.5301
+          },
+          {
+            "id": 8,
+            "text": "The system should display the current assignment status of each asset, including the assignee and assignment date.",
+            "source_turn": 10,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.8142,
+            "tfidf": 0.615
+          },
+          {
+            "id": 9,
+            "text": "The system should show upcoming warranty expiration dates and any scheduled maintenance for each asset.",
+            "source_turn": 10,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.6089,
+            "tfidf": 0.4815
+          },
+          {
+            "id": 10,
+            "text": "The system should provide a summary of all assets by category and their current status, indicating whether they are assigned, available, or in maintenance.",
+            "source_turn": 10,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.7725,
+            "tfidf": 0.5927
+          },
+          {
+            "id": 11,
+            "text": "The system should send automated alerts to IT staff when an asset's warranty expiration date is approaching and for scheduled maintenance, with options for email or dashboard notifications.",
+            "source_turn": 12,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.9762,
+            "tfidf": 0.7269
+          },
+          {
+            "id": 12,
+            "text": "The system should send reminders at multiple intervals leading up to the warranty expiration date or scheduled maintenance.",
+            "source_turn": 14,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.9192,
+            "tfidf": 0.5345
+          }
+        ]
+      },
+      {
+        "run": "run_005",
+        "total_requirements": 8,
+        "struct_traced": 8,
+        "structural_traceability_percent": 100.0,
+        "sem_traced": 8,
+        "semantic_similarity_percent": 100.0,
+        "avg_sbert": 0.7032,
+        "avg_tfidf": 0.6193,
+        "score_percent": 100.0,
+        "requirements": [
+          {
+            "id": 1,
+            "text": "A central system to log every IT asset with full details such as asset type, serial number, and purchase date, and to manage the assignment and unassignment of assets to employees while maintaining a record of those assignments.",
+            "source_turn": 2,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 1.0,
+            "tfidf": 1.0
+          },
+          {
+            "id": 2,
+            "text": "The system should maintain a history of all previous assignments.",
+            "source_turn": 4,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.4171,
+            "tfidf": 0.2679
+          },
+          {
+            "id": 3,
+            "text": "The system should maintain a detailed history of previous assignments, including the employee's name, dates of assignment and unassignment, and relevant notes about the asset's condition or usage.",
+            "source_turn": 6,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.9179,
+            "tfidf": 0.7329
+          },
+          {
+            "id": 4,
+            "text": "The system should notify the IT Coordinator immediately if the condition of an asset changes during its assignment and log the change in condition along with the date and relevant notes.",
+            "source_turn": 8,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.7146,
+            "tfidf": 0.6489
+          },
+          {
+            "id": 5,
+            "text": "The system should monitor and log changes such as damage, malfunction, or any modifications made to the asset.",
+            "source_turn": 10,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.7932,
+            "tfidf": 0.6691
+          },
+          {
+            "id": 6,
+            "text": "The system should track when an asset is returned in a different condition than it was assigned.",
+            "source_turn": 10,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.6592,
+            "tfidf": 0.5869
+          },
+          {
+            "id": 7,
+            "text": "The system should allow the IT Coordinator to review logged condition changes and notes related to asset returns.",
+            "source_turn": 14,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.602,
+            "tfidf": 0.5089
+          },
+          {
+            "id": 8,
+            "text": "The system should facilitate follow-up actions with employees regarding asset condition changes.",
+            "source_turn": 14,
+            "struct_traced": true,
+            "sem_traced": true,
+            "sbert": 0.5216,
+            "tfidf": 0.54
+          }
+        ]
+      }
+    ]
+  },
+  "issues": {
+    "runs_evaluated": 5,
+    "score_percent": 100.0,
+    "sd": 0.0,
+    "grade": "Excellent",
+    "run_details": [
+      {
+        "run": "run_001",
+        "total_issues": 4,
+        "turn_coverage_percent": 100.0,
+        "requirement_linkage_percent": 100.0,
+        "score_percent": 100.0,
+        "severity_breakdown": {
+          "high": 2,
+          "medium": 2,
+          "low": 0,
+          "unknown": 0
+        },
+        "issues": [
+          {
+            "issue_id": 1,
+            "type": "process_gap",
+            "severity": "high",
+            "status": "open",
+            "turn_id": 4,
+            "turn_valid": true,
+            "related_req_id": "1",
+            "req_link_valid": true,
+            "description": "The current asset tracking process is prone to human error, leading to unaccounted assets and confusion during audits.",
+            "created_by": "Morgan"
+          },
+          {
+            "issue_id": 2,
+            "type": "conflict",
+            "severity": "medium",
+            "status": "open",
+            "turn_id": 12,
+            "turn_valid": true,
+            "related_req_id": "1",
+            "req_link_valid": true,
+            "description": "There is a potential conflict between centralized IT control and the need for employees to have self-service visibility of their own assets.",
+            "created_by": "Morgan"
+          },
+          {
+            "issue_id": 3,
+            "type": "functional",
+            "severity": "medium",
+            "status": "open",
+            "turn_id": 12,
+            "turn_valid": true,
+            "related_req_id": "4",
+            "req_link_valid": true,
+            "description": "The system should support both email and in-app notifications for alerts.",
+            "created_by": "Morgan"
+          },
+          {
+            "issue_id": 4,
+            "type": "conflict",
+            "severity": "high",
+            "status": "open",
+            "turn_id": 14,
+            "turn_valid": true,
+            "related_req_id": "4",
+            "req_link_valid": true,
+            "description": "Morgan's preference for in-app notifications for real-time alerts conflicts with the belief that email is more reliable for critical alerts.",
+            "created_by": "Morgan"
+          }
+        ]
+      },
+      {
+        "run": "run_002",
+        "note": "No issues found in issues_log.json",
+        "score_percent": null
+      },
+      {
+        "run": "run_003",
+        "total_issues": 2,
+        "turn_coverage_percent": 100.0,
+        "requirement_linkage_percent": 100.0,
+        "score_percent": 100.0,
+        "severity_breakdown": {
+          "high": 1,
+          "medium": 1,
+          "low": 0,
+          "unknown": 0
+        },
+        "issues": [
+          {
+            "issue_id": 1,
+            "type": "process_gap",
+            "severity": "high",
+            "status": "open",
+            "turn_id": 14,
+            "turn_valid": true,
+            "related_req_id": "10",
+            "req_link_valid": true,
+            "description": "The system should allow for a standard retrieval period based on employee departure date.",
+            "created_by": "Morgan"
+          },
+          {
+            "issue_id": 2,
+            "type": "process_gap",
+            "severity": "medium",
+            "status": "open",
+            "turn_id": 14,
+            "turn_valid": true,
+            "related_req_id": "12",
+            "req_link_valid": true,
+            "description": "The system should flag specific asset types that require quicker retrieval.",
+            "created_by": "Morgan"
+          }
+        ]
+      },
+      {
+        "run": "run_004",
+        "note": "No issues found in issues_log.json",
+        "score_percent": null
+      },
+      {
+        "run": "run_005",
+        "note": "No issues found in issues_log.json",
+        "score_percent": null
+      }
+    ]
+  },
+  "gt_coverage": {
+    "runs_evaluated": 5,
+    "score_percent": 62.0,
+    "sd": 7.4833,
+    "grade": "Satisfactory",
+    "thresholds_used": [
+      0.45,
+      0.6,
+      0.7
+    ],
+    "primary_threshold": 0.45,
+    "note": "Primary score = SBERT >= 0.45 coverage. Coverage at 0.60 and 0.70 reported for sensitivity analysis. TF-IDF reported as secondary reference only.",
+    "run_details": [
+      {
+        "run": "run_001",
+        "total_gt": 10,
+        "covered_tfidf": 1,
+        "tfidf_coverage_percent": 10.0,
+        "covered_sbert_0.45": 5,
+        "covered_sbert_0.6": 1,
+        "covered_sbert_0.7": 0,
+        "coverage_sbert_0.45_percent": 50.0,
+        "coverage_sbert_0.6_percent": 10.0,
+        "coverage_sbert_0.7_percent": 0.0,
+        "score_percent": 50.0,
+        "per_gt": [
+          {
+            "id": "R1",
+            "type": "FR",
+            "ground_truth": "Users must be able to log IT assets with details including asset type, serial number, manufacturer, purchase date, and category.\n",
+            "best_sbert": 0.6332,
+            "best_tfidf": 0.3505,
+            "covered_tfidf": true,
+            "covered_0.45": true,
+            "covered_0.6": true,
+            "covered_0.7": false
+          },
+          {
+            "id": "R2",
+            "type": "FR",
+            "ground_truth": "Users must be able to assign and unassign assets to specific employees, with the assignment recorded against both the asset and the employee.\n",
+            "best_sbert": 0.4372,
+            "best_tfidf": 0.1779,
+            "covered_tfidf": false,
+            "covered_0.45": false,
+            "covered_0.6": false,
+            "covered_0.7": false
+          },
+          {
+            "id": "R3",
+            "type": "FR",
+            "ground_truth": "The system must maintain a full audit trail of all asset changes, including assignments, returns, repairs, and disposals.\n",
+            "best_sbert": 0.4835,
+            "best_tfidf": 0.096,
+            "covered_tfidf": false,
+            "covered_0.45": true,
+            "covered_0.6": false,
+            "covered_0.7": false
+          },
+          {
+            "id": "R4",
+            "type": "FR",
+            "ground_truth": "The system must alert IT staff when an asset warranty or scheduled maintenance date is approaching.\n",
+            "best_sbert": 0.5928,
+            "best_tfidf": 0.1317,
+            "covered_tfidf": false,
+            "covered_0.45": true,
+            "covered_0.6": false,
+            "covered_0.7": false
+          },
+          {
+            "id": "R5",
+            "type": "FR",
+            "ground_truth": "Users must be able to search and filter assets by category, status, assigned employee, and location.\n",
+            "best_sbert": 0.4031,
+            "best_tfidf": 0.0779,
+            "covered_tfidf": false,
+            "covered_0.45": false,
+            "covered_0.6": false,
+            "covered_0.7": false
+          },
+          {
+            "id": "R6",
+            "type": "FR",
+            "ground_truth": "The system must generate inventory and utilisation reports summarising asset counts, assignment rates, and upcoming warranty expirations.\n",
+            "best_sbert": 0.5707,
+            "best_tfidf": 0.0839,
+            "covered_tfidf": false,
+            "covered_0.45": true,
+            "covered_0.6": false,
+            "covered_0.7": false
+          },
+          {
+            "id": "R7",
+            "type": "FR",
+            "ground_truth": "The system must support offboarding workflows that automatically list all assets assigned to a departing employee for retrieval.\n",
+            "best_sbert": 0.5041,
+            "best_tfidf": 0.0923,
+            "covered_tfidf": false,
+            "covered_0.45": true,
+            "covered_0.6": false,
+            "covered_0.7": false
+          },
+          {
+            "id": "R8",
+            "type": "NFR",
+            "ground_truth": "The system must be accessible via a web browser without requiring a locally installed application.\n",
+            "best_sbert": 0.3166,
+            "best_tfidf": 0.0732,
+            "covered_tfidf": false,
+            "covered_0.45": false,
+            "covered_0.6": false,
+            "covered_0.7": false
+          },
+          {
+            "id": "R9",
+            "type": "NFR",
+            "ground_truth": "The system must enforce role-based access control, distinguishing between IT admin users with full write access and read-only viewers.\n",
+            "best_sbert": 0.3191,
+            "best_tfidf": 0.0468,
+            "covered_tfidf": false,
+            "covered_0.45": false,
+            "covered_0.6": false,
+            "covered_0.7": false
+          },
+          {
+            "id": "R10",
+            "type": "NFR",
+            "ground_truth": "The system must allow asset data to be exported in CSV or Excel format for use in external reporting.\n",
+            "best_sbert": 0.3846,
+            "best_tfidf": 0.1119,
+            "covered_tfidf": false,
+            "covered_0.45": false,
+            "covered_0.6": false,
+            "covered_0.7": false
+          }
+        ]
+      },
+      {
+        "run": "run_002",
+        "total_gt": 10,
+        "covered_tfidf": 2,
+        "tfidf_coverage_percent": 20.0,
+        "covered_sbert_0.45": 6,
+        "covered_sbert_0.6": 3,
+        "covered_sbert_0.7": 1,
+        "coverage_sbert_0.45_percent": 60.0,
+        "coverage_sbert_0.6_percent": 30.0,
+        "coverage_sbert_0.7_percent": 10.0,
+        "score_percent": 60.0,
+        "per_gt": [
+          {
+            "id": "R1",
+            "type": "FR",
+            "ground_truth": "Users must be able to log IT assets with details including asset type, serial number, manufacturer, purchase date, and category.\n",
+            "best_sbert": 0.6883,
+            "best_tfidf": 0.3736,
+            "covered_tfidf": true,
+            "covered_0.45": true,
+            "covered_0.6": true,
+            "covered_0.7": false
+          },
+          {
+            "id": "R2",
+            "type": "FR",
+            "ground_truth": "Users must be able to assign and unassign assets to specific employees, with the assignment recorded against both the asset and the employee.\n",
+            "best_sbert": 0.6132,
+            "best_tfidf": 0.1433,
+            "covered_tfidf": false,
+            "covered_0.45": true,
+            "covered_0.6": true,
+            "covered_0.7": false
+          },
+          {
+            "id": "R3",
+            "type": "FR",
+            "ground_truth": "The system must maintain a full audit trail of all asset changes, including assignments, returns, repairs, and disposals.\n",
+            "best_sbert": 0.5096,
+            "best_tfidf": 0.1096,
+            "covered_tfidf": false,
+            "covered_0.45": true,
+            "covered_0.6": false,
+            "covered_0.7": false
+          },
+          {
+            "id": "R4",
+            "type": "FR",
+            "ground_truth": "The system must alert IT staff when an asset warranty or scheduled maintenance date is approaching.\n",
+            "best_sbert": 0.4394,
+            "best_tfidf": 0.1227,
+            "covered_tfidf": false,
+            "covered_0.45": false,
+            "covered_0.6": false,
+            "covered_0.7": false
+          },
+          {
+            "id": "R5",
+            "type": "FR",
+            "ground_truth": "Users must be able to search and filter assets by category, status, assigned employee, and location.\n",
+            "best_sbert": 0.5484,
+            "best_tfidf": 0.0675,
+            "covered_tfidf": false,
+            "covered_0.45": true,
+            "covered_0.6": false,
+            "covered_0.7": false
+          },
+          {
+            "id": "R6",
+            "type": "FR",
+            "ground_truth": "The system must generate inventory and utilisation reports summarising asset counts, assignment rates, and upcoming warranty expirations.\n",
+            "best_sbert": 0.5821,
+            "best_tfidf": 0.0778,
+            "covered_tfidf": false,
+            "covered_0.45": true,
+            "covered_0.6": false,
+            "covered_0.7": false
+          },
+          {
+            "id": "R7",
+            "type": "FR",
+            "ground_truth": "The system must support offboarding workflows that automatically list all assets assigned to a departing employee for retrieval.\n",
+            "best_sbert": 0.7616,
+            "best_tfidf": 0.3357,
+            "covered_tfidf": true,
+            "covered_0.45": true,
+            "covered_0.6": true,
+            "covered_0.7": true
+          },
+          {
+            "id": "R8",
+            "type": "NFR",
+            "ground_truth": "The system must be accessible via a web browser without requiring a locally installed application.\n",
+            "best_sbert": 0.2664,
+            "best_tfidf": 0.0329,
+            "covered_tfidf": false,
+            "covered_0.45": false,
+            "covered_0.6": false,
+            "covered_0.7": false
+          },
+          {
+            "id": "R9",
+            "type": "NFR",
+            "ground_truth": "The system must enforce role-based access control, distinguishing between IT admin users with full write access and read-only viewers.\n",
+            "best_sbert": 0.4278,
+            "best_tfidf": 0.0749,
+            "covered_tfidf": false,
+            "covered_0.45": false,
+            "covered_0.6": false,
+            "covered_0.7": false
+          },
+          {
+            "id": "R10",
+            "type": "NFR",
+            "ground_truth": "The system must allow asset data to be exported in CSV or Excel format for use in external reporting.\n",
+            "best_sbert": 0.4015,
+            "best_tfidf": 0.0759,
+            "covered_tfidf": false,
+            "covered_0.45": false,
+            "covered_0.6": false,
+            "covered_0.7": false
+          }
+        ]
+      },
+      {
+        "run": "run_003",
+        "total_gt": 10,
+        "covered_tfidf": 2,
+        "tfidf_coverage_percent": 20.0,
+        "covered_sbert_0.45": 7,
+        "covered_sbert_0.6": 4,
+        "covered_sbert_0.7": 1,
+        "coverage_sbert_0.45_percent": 70.0,
+        "coverage_sbert_0.6_percent": 40.0,
+        "coverage_sbert_0.7_percent": 10.0,
+        "score_percent": 70.0,
+        "per_gt": [
+          {
+            "id": "R1",
+            "type": "FR",
+            "ground_truth": "Users must be able to log IT assets with details including asset type, serial number, manufacturer, purchase date, and category.\n",
+            "best_sbert": 0.639,
+            "best_tfidf": 0.316,
+            "covered_tfidf": true,
+            "covered_0.45": true,
+            "covered_0.6": true,
+            "covered_0.7": false
+          },
+          {
+            "id": "R2",
+            "type": "FR",
+            "ground_truth": "Users must be able to assign and unassign assets to specific employees, with the assignment recorded against both the asset and the employee.\n",
+            "best_sbert": 0.6236,
+            "best_tfidf": 0.1663,
+            "covered_tfidf": false,
+            "covered_0.45": true,
+            "covered_0.6": true,
+            "covered_0.7": false
+          },
+          {
+            "id": "R3",
+            "type": "FR",
+            "ground_truth": "The system must maintain a full audit trail of all asset changes, including assignments, returns, repairs, and disposals.\n",
+            "best_sbert": 0.5612,
+            "best_tfidf": 0.1106,
+            "covered_tfidf": false,
+            "covered_0.45": true,
+            "covered_0.6": false,
+            "covered_0.7": false
+          },
+          {
+            "id": "R4",
+            "type": "FR",
+            "ground_truth": "The system must alert IT staff when an asset warranty or scheduled maintenance date is approaching.\n",
+            "best_sbert": 0.6811,
+            "best_tfidf": 0.1531,
+            "covered_tfidf": false,
+            "covered_0.45": true,
+            "covered_0.6": true,
+            "covered_0.7": false
+          },
+          {
+            "id": "R5",
+            "type": "FR",
+            "ground_truth": "Users must be able to search and filter assets by category, status, assigned employee, and location.\n",
+            "best_sbert": 0.4935,
+            "best_tfidf": 0.1081,
+            "covered_tfidf": false,
+            "covered_0.45": true,
+            "covered_0.6": false,
+            "covered_0.7": false
+          },
+          {
+            "id": "R6",
+            "type": "FR",
+            "ground_truth": "The system must generate inventory and utilisation reports summarising asset counts, assignment rates, and upcoming warranty expirations.\n",
+            "best_sbert": 0.5761,
+            "best_tfidf": 0.0659,
+            "covered_tfidf": false,
+            "covered_0.45": true,
+            "covered_0.6": false,
+            "covered_0.7": false
+          },
+          {
+            "id": "R7",
+            "type": "FR",
+            "ground_truth": "The system must support offboarding workflows that automatically list all assets assigned to a departing employee for retrieval.\n",
+            "best_sbert": 0.8284,
+            "best_tfidf": 0.2167,
+            "covered_tfidf": true,
+            "covered_0.45": true,
+            "covered_0.6": true,
+            "covered_0.7": true
+          },
+          {
+            "id": "R8",
+            "type": "NFR",
+            "ground_truth": "The system must be accessible via a web browser without requiring a locally installed application.\n",
+            "best_sbert": 0.2044,
+            "best_tfidf": 0.0343,
+            "covered_tfidf": false,
+            "covered_0.45": false,
+            "covered_0.6": false,
+            "covered_0.7": false
+          },
+          {
+            "id": "R9",
+            "type": "NFR",
+            "ground_truth": "The system must enforce role-based access control, distinguishing between IT admin users with full write access and read-only viewers.\n",
+            "best_sbert": 0.3228,
+            "best_tfidf": 0.0704,
+            "covered_tfidf": false,
+            "covered_0.45": false,
+            "covered_0.6": false,
+            "covered_0.7": false
+          },
+          {
+            "id": "R10",
+            "type": "NFR",
+            "ground_truth": "The system must allow asset data to be exported in CSV or Excel format for use in external reporting.\n",
+            "best_sbert": 0.3811,
+            "best_tfidf": 0.0905,
+            "covered_tfidf": false,
+            "covered_0.45": false,
+            "covered_0.6": false,
+            "covered_0.7": false
+          }
+        ]
+      },
+      {
+        "run": "run_004",
+        "total_gt": 10,
+        "covered_tfidf": 3,
+        "tfidf_coverage_percent": 30.0,
+        "covered_sbert_0.45": 7,
+        "covered_sbert_0.6": 4,
+        "covered_sbert_0.7": 3,
+        "coverage_sbert_0.45_percent": 70.0,
+        "coverage_sbert_0.6_percent": 40.0,
+        "coverage_sbert_0.7_percent": 30.0,
+        "score_percent": 70.0,
+        "per_gt": [
+          {
+            "id": "R1",
+            "type": "FR",
+            "ground_truth": "Users must be able to log IT assets with details including asset type, serial number, manufacturer, purchase date, and category.\n",
+            "best_sbert": 0.639,
+            "best_tfidf": 0.3148,
+            "covered_tfidf": true,
+            "covered_0.45": true,
+            "covered_0.6": true,
+            "covered_0.7": false
+          },
+          {
+            "id": "R2",
+            "type": "FR",
+            "ground_truth": "Users must be able to assign and unassign assets to specific employees, with the assignment recorded against both the asset and the employee.\n",
+            "best_sbert": 0.4917,
+            "best_tfidf": 0.1546,
+            "covered_tfidf": false,
+            "covered_0.45": true,
+            "covered_0.6": false,
+            "covered_0.7": false
+          },
+          {
+            "id": "R3",
+            "type": "FR",
+            "ground_truth": "The system must maintain a full audit trail of all asset changes, including assignments, returns, repairs, and disposals.\n",
+            "best_sbert": 0.9346,
+            "best_tfidf": 0.5486,
+            "covered_tfidf": true,
+            "covered_0.45": true,
+            "covered_0.6": true,
+            "covered_0.7": true
+          },
+          {
+            "id": "R4",
+            "type": "FR",
+            "ground_truth": "The system must alert IT staff when an asset warranty or scheduled maintenance date is approaching.\n",
+            "best_sbert": 0.8627,
+            "best_tfidf": 0.4638,
+            "covered_tfidf": true,
+            "covered_0.45": true,
+            "covered_0.6": true,
+            "covered_0.7": true
+          },
+          {
+            "id": "R5",
+            "type": "FR",
+            "ground_truth": "Users must be able to search and filter assets by category, status, assigned employee, and location.\n",
+            "best_sbert": 0.5136,
+            "best_tfidf": 0.1783,
+            "covered_tfidf": false,
+            "covered_0.45": true,
+            "covered_0.6": false,
+            "covered_0.7": false
+          },
+          {
+            "id": "R6",
+            "type": "FR",
+            "ground_truth": "The system must generate inventory and utilisation reports summarising asset counts, assignment rates, and upcoming warranty expirations.\n",
+            "best_sbert": 0.5994,
+            "best_tfidf": 0.1255,
+            "covered_tfidf": false,
+            "covered_0.45": true,
+            "covered_0.6": false,
+            "covered_0.7": false
+          },
+          {
+            "id": "R7",
+            "type": "FR",
+            "ground_truth": "The system must support offboarding workflows that automatically list all assets assigned to a departing employee for retrieval.\n",
+            "best_sbert": 0.7605,
+            "best_tfidf": 0.1513,
+            "covered_tfidf": false,
+            "covered_0.45": true,
+            "covered_0.6": true,
+            "covered_0.7": true
+          },
+          {
+            "id": "R8",
+            "type": "NFR",
+            "ground_truth": "The system must be accessible via a web browser without requiring a locally installed application.\n",
+            "best_sbert": 0.1579,
+            "best_tfidf": 0.0256,
+            "covered_tfidf": false,
+            "covered_0.45": false,
+            "covered_0.6": false,
+            "covered_0.7": false
+          },
+          {
+            "id": "R9",
+            "type": "NFR",
+            "ground_truth": "The system must enforce role-based access control, distinguishing between IT admin users with full write access and read-only viewers.\n",
+            "best_sbert": 0.3228,
+            "best_tfidf": 0.0659,
+            "covered_tfidf": false,
+            "covered_0.45": false,
+            "covered_0.6": false,
+            "covered_0.7": false
+          },
+          {
+            "id": "R10",
+            "type": "NFR",
+            "ground_truth": "The system must allow asset data to be exported in CSV or Excel format for use in external reporting.\n",
+            "best_sbert": 0.414,
+            "best_tfidf": 0.0738,
+            "covered_tfidf": false,
+            "covered_0.45": false,
+            "covered_0.6": false,
+            "covered_0.7": false
+          }
+        ]
+      },
+      {
+        "run": "run_005",
+        "total_gt": 10,
+        "covered_tfidf": 2,
+        "tfidf_coverage_percent": 20.0,
+        "covered_sbert_0.45": 6,
+        "covered_sbert_0.6": 3,
+        "covered_sbert_0.7": 0,
+        "coverage_sbert_0.45_percent": 60.0,
+        "coverage_sbert_0.6_percent": 30.0,
+        "coverage_sbert_0.7_percent": 0.0,
+        "score_percent": 60.0,
+        "per_gt": [
+          {
+            "id": "R1",
+            "type": "FR",
+            "ground_truth": "Users must be able to log IT assets with details including asset type, serial number, manufacturer, purchase date, and category.\n",
+            "best_sbert": 0.639,
+            "best_tfidf": 0.3157,
+            "covered_tfidf": true,
+            "covered_0.45": true,
+            "covered_0.6": true,
+            "covered_0.7": false
+          },
+          {
+            "id": "R2",
+            "type": "FR",
+            "ground_truth": "Users must be able to assign and unassign assets to specific employees, with the assignment recorded against both the asset and the employee.\n",
+            "best_sbert": 0.5413,
+            "best_tfidf": 0.1641,
+            "covered_tfidf": false,
+            "covered_0.45": true,
+            "covered_0.6": false,
+            "covered_0.7": false
+          },
+          {
+            "id": "R3",
+            "type": "FR",
+            "ground_truth": "The system must maintain a full audit trail of all asset changes, including assignments, returns, repairs, and disposals.\n",
+            "best_sbert": 0.6538,
+            "best_tfidf": 0.2204,
+            "covered_tfidf": true,
+            "covered_0.45": true,
+            "covered_0.6": true,
+            "covered_0.7": false
+          },
+          {
+            "id": "R4",
+            "type": "FR",
+            "ground_truth": "The system must alert IT staff when an asset warranty or scheduled maintenance date is approaching.\n",
+            "best_sbert": 0.6147,
+            "best_tfidf": 0.1941,
+            "covered_tfidf": false,
+            "covered_0.45": true,
+            "covered_0.6": true,
+            "covered_0.7": false
+          },
+          {
+            "id": "R5",
+            "type": "FR",
+            "ground_truth": "Users must be able to search and filter assets by category, status, assigned employee, and location.\n",
+            "best_sbert": 0.4087,
+            "best_tfidf": 0.0689,
+            "covered_tfidf": false,
+            "covered_0.45": false,
+            "covered_0.6": false,
+            "covered_0.7": false
+          },
+          {
+            "id": "R6",
+            "type": "FR",
+            "ground_truth": "The system must generate inventory and utilisation reports summarising asset counts, assignment rates, and upcoming warranty expirations.\n",
+            "best_sbert": 0.5761,
+            "best_tfidf": 0.0659,
+            "covered_tfidf": false,
+            "covered_0.45": true,
+            "covered_0.6": false,
+            "covered_0.7": false
+          },
+          {
+            "id": "R7",
+            "type": "FR",
+            "ground_truth": "The system must support offboarding workflows that automatically list all assets assigned to a departing employee for retrieval.\n",
+            "best_sbert": 0.5316,
+            "best_tfidf": 0.0629,
+            "covered_tfidf": false,
+            "covered_0.45": true,
+            "covered_0.6": false,
+            "covered_0.7": false
+          },
+          {
+            "id": "R8",
+            "type": "NFR",
+            "ground_truth": "The system must be accessible via a web browser without requiring a locally installed application.\n",
+            "best_sbert": 0.1831,
+            "best_tfidf": 0.0286,
+            "covered_tfidf": false,
+            "covered_0.45": false,
+            "covered_0.6": false,
+            "covered_0.7": false
+          },
+          {
+            "id": "R9",
+            "type": "NFR",
+            "ground_truth": "The system must enforce role-based access control, distinguishing between IT admin users with full write access and read-only viewers.\n",
+            "best_sbert": 0.4138,
+            "best_tfidf": 0.0655,
+            "covered_tfidf": false,
+            "covered_0.45": false,
+            "covered_0.6": false,
+            "covered_0.7": false
+          },
+          {
+            "id": "R10",
+            "type": "NFR",
+            "ground_truth": "The system must allow asset data to be exported in CSV or Excel format for use in external reporting.\n",
+            "best_sbert": 0.3811,
+            "best_tfidf": 0.0741,
+            "covered_tfidf": false,
+            "covered_0.45": false,
+            "covered_0.6": false,
+            "covered_0.7": false
+          }
+        ]
+      }
+    ]
+  },
+  "req_reproducibility": {
+    "runs_compared": 5,
+    "pairs_evaluated": 10,
+    "avg_score_percent": 60.87,
+    "sd": 4.2596,
+    "grade": "Satisfactory",
+    "method": "SBERT (all-MiniLM-L6-v2)",
+    "interpretation": "Measures whether the same requirements were elicited across runs, regardless of wording.",
+    "pair_details": [
+      {
+        "pair": "run_001 vs run_002",
+        "reqs_run_a": 6,
+        "reqs_run_b": 9,
+        "ab_best_match_percent": 61.99,
+        "ba_best_match_percent": 58.74,
+        "symmetric_score_percent": 60.36,
+        "method": "SBERT"
+      },
+      {
+        "pair": "run_001 vs run_003",
+        "reqs_run_a": 6,
+        "reqs_run_b": 12,
+        "ab_best_match_percent": 57.78,
+        "ba_best_match_percent": 53.75,
+        "symmetric_score_percent": 55.76,
+        "method": "SBERT"
+      },
+      {
+        "pair": "run_001 vs run_004",
+        "reqs_run_a": 6,
+        "reqs_run_b": 12,
+        "ab_best_match_percent": 58.44,
+        "ba_best_match_percent": 54.15,
+        "symmetric_score_percent": 56.3,
+        "method": "SBERT"
+      },
+      {
+        "pair": "run_001 vs run_005",
+        "reqs_run_a": 6,
+        "reqs_run_b": 8,
+        "ab_best_match_percent": 54.15,
+        "ba_best_match_percent": 62.57,
+        "symmetric_score_percent": 58.36,
+        "method": "SBERT"
+      },
+      {
+        "pair": "run_002 vs run_003",
+        "reqs_run_a": 9,
+        "reqs_run_b": 12,
+        "ab_best_match_percent": 60.73,
+        "ba_best_match_percent": 57.46,
+        "symmetric_score_percent": 59.09,
+        "method": "SBERT"
+      },
+      {
+        "pair": "run_002 vs run_004",
+        "reqs_run_a": 9,
+        "reqs_run_b": 12,
+        "ab_best_match_percent": 56.79,
+        "ba_best_match_percent": 56.69,
+        "symmetric_score_percent": 56.74,
+        "method": "SBERT"
+      },
+      {
+        "pair": "run_002 vs run_005",
+        "reqs_run_a": 9,
+        "reqs_run_b": 8,
+        "ab_best_match_percent": 60.0,
+        "ba_best_match_percent": 64.32,
+        "symmetric_score_percent": 62.16,
+        "method": "SBERT"
+      },
+      {
+        "pair": "run_003 vs run_004",
+        "reqs_run_a": 12,
+        "reqs_run_b": 12,
+        "ab_best_match_percent": 68.99,
+        "ba_best_match_percent": 68.02,
+        "symmetric_score_percent": 68.51,
+        "method": "SBERT"
+      },
+      {
+        "pair": "run_003 vs run_005",
+        "reqs_run_a": 12,
+        "reqs_run_b": 8,
+        "ab_best_match_percent": 61.78,
+        "ba_best_match_percent": 68.61,
+        "symmetric_score_percent": 65.2,
+        "method": "SBERT"
+      },
+      {
+        "pair": "run_004 vs run_005",
+        "reqs_run_a": 12,
+        "reqs_run_b": 8,
+        "ab_best_match_percent": 63.62,
+        "ba_best_match_percent": 68.88,
+        "symmetric_score_percent": 66.25,
+        "method": "SBERT"
+      }
+    ]
+  },
+  "summary": {
+    "dimension_scores": {
+      "feasibility": 100.0,
+      "structural_reproducibility": 100.0,
+      "semantic_reproducibility_sbert": 60.24,
+      "requirement_content_reproducibility": 60.87,
+      "traceability": 100.0,
+      "issues_traceability": 100.0,
+      "gt_coverage_sbert_0_45": 62.0
+    },
+    "overall_mean_percent": 83.3,
+    "overall_grade": "Good"
+  }
+}
